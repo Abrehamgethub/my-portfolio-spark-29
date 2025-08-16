@@ -5,36 +5,52 @@ import { ExternalLink, Github } from "lucide-react";
 const Projects = () => {
   const projects = [
     {
-      title: "E-Commerce Platform",
-      description: "A modern e-commerce solution built with React, Node.js, and PostgreSQL. Features include user authentication, payment processing, and admin dashboard.",
-      tags: ["React", "Node.js", "PostgreSQL", "Stripe"],
+      title: "Data Center Design & Implementation",
+      description: "Comprehensive data center solutions for major Ethiopian banks including Abay Bank, Addis International Bank, and United Bank. Achieved 15% energy reduction through optimized cooling and layout designs.",
+      tags: ["Infrastructure", "Network Security", "Energy Optimization", "Project Management"],
       liveUrl: "#",
       githubUrl: "#",
-      image: "🛒"
+      image: "🏢"
     },
     {
-      title: "Task Management App",
-      description: "Collaborative task management application with real-time updates, drag-and-drop functionality, and team collaboration features.",
-      tags: ["React", "Socket.io", "MongoDB", "Express"],
+      title: "Network Infrastructure for International Organizations",
+      description: "Large-scale network setup for ECA and World Food Program. Successfully installed network infrastructure for 1500 workstations, 50 printers, and 50 communication rooms within 3 weeks.",
+      tags: ["Network Design", "VPN Implementation", "Large Scale Deployment"],
       liveUrl: "#",
       githubUrl: "#",
-      image: "📋"
+      image: "🌐"
     },
     {
-      title: "Weather Dashboard",
-      description: "Beautiful weather application with location-based forecasting, interactive maps, and detailed weather analytics.",
-      tags: ["Vue.js", "API Integration", "Chart.js", "CSS3"],
+      title: "Mobile Device Management System",
+      description: "Managed over 350 iPad and Mac users through MDM systems at Ethiopian Education Initiatives, ensuring secure device performance and seamless Google Workspace integration.",
+      tags: ["MDM", "Google Workspace", "iOS Management", "Security"],
       liveUrl: "#",
       githubUrl: "#",
-      image: "🌤️"
+      image: "📱"
     },
     {
-      title: "Portfolio CMS",
-      description: "Content management system for creative professionals to showcase their work with customizable themes and SEO optimization.",
-      tags: ["Next.js", "Prisma", "TailwindCSS", "Vercel"],
+      title: "Python Programming Education",
+      description: "Developed and delivered comprehensive Python programming curriculum to high school students, equipping over 350 students with essential coding skills and technical foundation.",
+      tags: ["Python", "Education", "Curriculum Development", "Student Training"],
       liveUrl: "#",
       githubUrl: "#",
-      image: "🎨"
+      image: "🐍"
+    },
+    {
+      title: "Windows Server Environment Optimization",
+      description: "Directed implementation and performance tuning of Windows Server environments for multiple clients. Built new file servers and resolved chronic network failures for improved performance.",
+      tags: ["Windows Server", "Active Directory", "Performance Tuning", "Disaster Recovery"],
+      liveUrl: "#",
+      githubUrl: "#",
+      image: "🖥️"
+    },
+    {
+      title: "Customer Support Team Leadership",
+      description: "Led remote customer support teams at Hikma Electronics, managing KPIs and ensuring efficient resolution of customer inquiries across multiple platforms including voice, chat, and social media.",
+      tags: ["Team Leadership", "Customer Support", "KPI Management", "Process Optimization"],
+      liveUrl: "#",
+      githubUrl: "#",
+      image: "👥"
     }
   ];
 

@@ -29,9 +29,10 @@ const Contact = () => {
             <div>
               <h3 className="text-2xl font-bold mb-6">Let's Connect</h3>
               <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
-                I'm always excited to work on new projects and collaborate with 
-                amazing people. Whether you have a project in mind or just want 
-                to say hello, feel free to reach out!
+                I'm always excited to work on new IT projects and collaborate with 
+                organizations to solve complex technical challenges. Whether you need 
+                network administration, customer support solutions, or team leadership, 
+                feel free to reach out!
               </p>
             </div>
 
@@ -42,7 +43,7 @@ const Contact = () => {
                 </div>
                 <div>
                   <p className="font-medium">Email</p>
-                  <p className="text-muted-foreground">hello@yourportfolio.com</p>
+                  <p className="text-muted-foreground">akabrehamkassahun@gmail.com</p>
                 </div>
               </div>
 
@@ -52,7 +53,7 @@ const Contact = () => {
                 </div>
                 <div>
                   <p className="font-medium">Phone</p>
-                  <p className="text-muted-foreground">+1 (555) 123-4567</p>
+                  <p className="text-muted-foreground">+251 911 906 140</p>
                 </div>
               </div>
 
@@ -62,7 +63,7 @@ const Contact = () => {
                 </div>
                 <div>
                   <p className="font-medium">Location</p>
-                  <p className="text-muted-foreground">San Francisco, CA</p>
+                  <p className="text-muted-foreground">Addis Ababa, Ethiopia</p>
                 </div>
               </div>
             </div>

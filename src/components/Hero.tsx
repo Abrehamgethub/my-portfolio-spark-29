@@ -32,15 +32,15 @@ const Hero = () => {
         <div className="max-w-4xl mx-auto animate-fade-in">
           <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight">
             <span className="bg-hero-gradient bg-clip-text text-transparent">
-              Creative Developer
+              Abreham Kassahun
             </span>
             <br />
-            <span className="text-foreground">& Designer</span>
+            <span className="text-foreground">IT Specialist & Support Pro</span>
           </h1>
           
           <p className="text-xl md:text-2xl text-muted-foreground mb-8 max-w-2xl mx-auto leading-relaxed">
-            I craft beautiful digital experiences that bring ideas to life through 
-            clean code and thoughtful design.
+            Experienced IT professional specializing in network administration, cybersecurity, 
+            and exceptional customer support solutions.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
