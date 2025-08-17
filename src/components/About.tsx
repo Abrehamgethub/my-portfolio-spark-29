@@ -6,6 +6,8 @@ const About = () => {
     { name: "Customer Support", level: 98 },
     { name: "Cybersecurity", level: 85 },
     { name: "Python Programming", level: 80 },
+    { name: "Video Editing & Motion Graphics", level: 90 },
+    { name: "Adobe Creative Suite", level: 88 },
     { name: "Windows Server", level: 90 },
     { name: "Team Leadership", level: 92 }
   ];
@@ -26,20 +28,20 @@ const About = () => {
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="space-y-6">
               <p className="text-lg leading-relaxed text-muted-foreground">
-                I'm an experienced IT support professional with a robust background in customer 
-                service, project management, and technical support. With over 9 years of experience, 
-                I've proven my track record of leading teams to deliver exceptional customer 
-                experiences and resolve complex technical issues efficiently.
+                Multidisciplinary IT Support Specialist and Creative Technologist with 8+ years of experience 
+                supporting enterprise infrastructure, resolving hardware/software issues, managing helpdesks, 
+                and coordinating digital creative platforms. Certified in Google IT Support, CCNA, Cybersecurity, 
+                and Adobe Creative Suite.
               </p>
               
               <p className="text-lg leading-relaxed text-muted-foreground">
-                Currently serving as an IT Officer and Programming Instructor at Ethiopian Education 
-                Initiatives, where I manage over 350 iPad and Mac users through MDM systems and 
-                deliver Python programming instruction to high school students.
+                Recently expanded into creative services, delivering video editing and motion graphics 
+                content using Adobe Premiere Pro and After Effects for digital campaigns. Passionate about 
+                integrating robust IT operations with engaging digital storytelling.
               </p>
 
               <div className="flex flex-wrap gap-3">
-                {["Network Administration", "Cybersecurity", "Python", "MDM", "Windows Server", "Active Directory", "Zendesk", "AWS", "Azure"].map((tech) => (
+                {["Network Administration", "Cybersecurity", "Python", "MDM", "Windows Server", "Active Directory", "Adobe Creative Suite", "Premiere Pro", "After Effects", "AWS", "Azure"].map((tech) => (
                   <span 
                     key={tech}
                     className="px-4 py-2 bg-card rounded-full text-sm font-medium shadow-soft hover:shadow-medium transition-all duration-300"

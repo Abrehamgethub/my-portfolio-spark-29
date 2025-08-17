@@ -2,7 +2,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import { Mail, Phone, MapPin, Github, Linkedin, Twitter } from "lucide-react";
+import { Mail, Phone, MapPin, Github, Linkedin, Palette, Youtube } from "lucide-react";
 
 const Contact = () => {
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
@@ -36,10 +36,9 @@ const Contact = () => {
             <div>
               <h3 className="text-2xl font-bold mb-6">Let's Connect</h3>
               <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
-                I'm always excited to work on new IT projects and collaborate with 
-                organizations to solve complex technical challenges. Whether you need 
-                network administration, customer support solutions, or team leadership, 
-                feel free to reach out!
+                I'm always excited to work on new IT projects and creative collaborations. 
+                Whether you need network administration, customer support solutions, team leadership, 
+                or video editing and motion graphics for digital campaigns, feel free to reach out!
               </p>
             </div>
 
@@ -81,7 +80,8 @@ const Contact = () => {
                 {[
                   { icon: Github, href: "https://github.com/Abrehamgethub" },
                   { icon: Linkedin, href: "https://www.linkedin.com/in/abreham-techsupport/" },
-                  { icon: Twitter, href: "https://twitter.com/AbrehamKassahun" }
+                  { icon: Palette, href: "https://www.behance.net/abrehamkassahun" },
+                  { icon: Youtube, href: "https://www.youtube.com/@abrehamkassahun917/playlists" }
                 ].map((social, index) => (
                   <a
                     key={index}
