@@ -79,8 +79,8 @@ const Contact = () => {
               <h4 className="font-medium mb-4">Follow Me</h4>
               <div className="flex gap-4">
                 {[
-                  { icon: Github, href: "https://github.com/AbrehamKassahun" },
-                  { icon: Linkedin, href: "https://linkedin.com/in/abreham-kassahun" },
+                  { icon: Github, href: "https://github.com/Abrehamgethub" },
+                  { icon: Linkedin, href: "https://www.linkedin.com/in/abreham-techsupport/" },
                   { icon: Twitter, href: "https://twitter.com/AbrehamKassahun" }
                 ].map((social, index) => (
                   <a
