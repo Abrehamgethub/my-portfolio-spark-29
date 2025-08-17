@@ -5,10 +5,17 @@ import { Textarea } from "@/components/ui/textarea";
 import { Mail, Phone, MapPin, Github, Linkedin, Twitter } from "lucide-react";
 
 const Contact = () => {
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    // Handle form submission here
-    console.log('Form submitted');
+    const formData = new FormData(e.currentTarget);
+    const name = formData.get('name');
+    const email = formData.get('email');
+    const subject = formData.get('subject');
+    const message = formData.get('message');
+    
+    // Create mailto link with form data
+    const mailtoLink = `mailto:akabrehamkassahun@gmail.com?subject=${encodeURIComponent(subject as string)}&body=${encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`)}`;
+    window.location.href = mailtoLink;
   };
 
   return (
@@ -72,9 +79,9 @@ const Contact = () => {
               <h4 className="font-medium mb-4">Follow Me</h4>
               <div className="flex gap-4">
                 {[
-                  { icon: Github, href: "#" },
-                  { icon: Linkedin, href: "#" },
-                  { icon: Twitter, href: "#" }
+                  { icon: Github, href: "https://github.com/AbrehamKassahun" },
+                  { icon: Linkedin, href: "https://linkedin.com/in/abreham-kassahun" },
+                  { icon: Twitter, href: "https://twitter.com/AbrehamKassahun" }
                 ].map((social, index) => (
                   <a
                     key={index}
@@ -104,8 +111,10 @@ const Contact = () => {
                     </label>
                     <Input 
                       id="name"
+                      name="name"
                       placeholder="Your name"
                       className="bg-background/50"
+                      required
                     />
                   </div>
                   <div>
@@ -114,9 +123,11 @@ const Contact = () => {
                     </label>
                     <Input 
                       id="email"
+                      name="email"
                       type="email"
                       placeholder="your@email.com"
                       className="bg-background/50"
+                      required
                     />
                   </div>
                 </div>
@@ -127,8 +138,10 @@ const Contact = () => {
                   </label>
                   <Input 
                     id="subject"
+                    name="subject"
                     placeholder="Project inquiry"
                     className="bg-background/50"
+                    required
                   />
                 </div>
 
@@ -138,9 +151,11 @@ const Contact = () => {
                   </label>
                   <Textarea 
                     id="message"
+                    name="message"
                     placeholder="Tell me about your project..."
                     rows={5}
                     className="bg-background/50"
+                    required
                   />
                 </div>
 
