@@ -5,6 +5,22 @@ import { ExternalLink, Github } from "lucide-react";
 const Projects = () => {
   const projects = [
     {
+      title: "Digital Campaign Video Content",
+      description: "Creative video editing and motion graphics projects for various clients. Delivering engaging visual content using Adobe Premiere Pro and After Effects, integrating modern design principles with compelling storytelling.",
+      tags: ["Video Editing", "Motion Graphics", "Adobe Premiere Pro", "After Effects", "Creative Direction"],
+      liveUrl: "https://www.behance.net/abrehamkassahun",
+      githubUrl: "#",
+      image: "🎬"
+    },
+    {
+      title: "Enterprise IT Consulting Services",
+      description: "Comprehensive IT consulting solutions including network administration, cybersecurity assessments, and infrastructure optimization for businesses across Ethiopia.",
+      tags: ["IT Consulting", "Network Administration", "Cybersecurity", "Infrastructure Design"],
+      liveUrl: "#",
+      githubUrl: "#",
+      image: "💼"
+    },
+    {
       title: "Data Center Design & Implementation",
       description: "Comprehensive data center solutions for major Ethiopian banks including Abay Bank, Addis International Bank, and United Bank. Achieved 15% energy reduction through optimized cooling and layout designs.",
       tags: ["Infrastructure", "Network Security", "Energy Optimization", "Project Management"],
@@ -29,28 +45,12 @@ const Projects = () => {
       image: "📱"
     },
     {
-      title: "Python Programming Education",
-      description: "Developed and delivered comprehensive Python programming curriculum to high school students, equipping over 350 students with essential coding skills and technical foundation.",
+      title: "Python Programming Education Platform",
+      description: "Developed and delivered comprehensive Python programming curriculum to high school students, equipping over 350 students with essential coding skills and technical foundation through interactive learning methods.",
       tags: ["Python", "Education", "Curriculum Development", "Student Training"],
-      liveUrl: "#",
+      liveUrl: "https://www.youtube.com/@abrehamkassahun917/playlists",
       githubUrl: "#",
       image: "🐍"
-    },
-    {
-      title: "Windows Server Environment Optimization",
-      description: "Directed implementation and performance tuning of Windows Server environments for multiple clients. Built new file servers and resolved chronic network failures for improved performance.",
-      tags: ["Windows Server", "Active Directory", "Performance Tuning", "Disaster Recovery"],
-      liveUrl: "#",
-      githubUrl: "#",
-      image: "🖥️"
-    },
-    {
-      title: "Customer Support Team Leadership",
-      description: "Led remote customer support teams at Hikma Electronics, managing KPIs and ensuring efficient resolution of customer inquiries across multiple platforms including voice, chat, and social media.",
-      tags: ["Team Leadership", "Customer Support", "KPI Management", "Process Optimization"],
-      liveUrl: "#",
-      githubUrl: "#",
-      image: "👥"
     }
   ];
 

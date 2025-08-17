@@ -2,20 +2,51 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import { Mail, Phone, MapPin, Github, Linkedin, Palette, Youtube } from "lucide-react";
+import { useToast } from "@/components/ui/use-toast";
+import { Mail, Phone, MapPin, Github, Linkedin, Youtube } from "lucide-react";
+import { supabase, type ContactMessage } from "@/lib/supabase";
+import { useState } from "react";
 
 const Contact = () => {
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const { toast } = useToast();
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    setIsSubmitting(true);
+
     const formData = new FormData(e.currentTarget);
-    const name = formData.get('name');
-    const email = formData.get('email');
-    const subject = formData.get('subject');
-    const message = formData.get('message');
-    
-    // Create mailto link with form data
-    const mailtoLink = `mailto:akabrehamkassahun@gmail.com?subject=${encodeURIComponent(subject as string)}&body=${encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`)}`;
-    window.location.href = mailtoLink;
+    const contactData: ContactMessage = {
+      name: formData.get('name') as string,
+      email: formData.get('email') as string,
+      subject: formData.get('subject') as string,
+      message: formData.get('message') as string,
+    };
+
+    try {
+      const { error } = await supabase
+        .from('contact_messages')
+        .insert([contactData]);
+
+      if (error) throw error;
+
+      toast({
+        title: "Message sent successfully!",
+        description: "Thank you for reaching out. I'll get back to you soon.",
+      });
+
+      // Reset form
+      e.currentTarget.reset();
+    } catch (error) {
+      console.error('Error sending message:', error);
+      toast({
+        title: "Failed to send message",
+        description: "Please try again or contact me directly via email.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -77,22 +108,47 @@ const Contact = () => {
             <div className="pt-8">
               <h4 className="font-medium mb-4">Follow Me</h4>
               <div className="flex gap-4">
-                {[
-                  { icon: Github, href: "https://github.com/Abrehamgethub" },
-                  { icon: Linkedin, href: "https://www.linkedin.com/in/abreham-techsupport/" },
-                  { icon: Palette, href: "https://www.behance.net/abrehamkassahun" },
-                  { icon: Youtube, href: "https://www.youtube.com/@abrehamkassahun917/playlists" }
-                ].map((social, index) => (
-                  <a
-                    key={index}
-                    href={social.href}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="w-10 h-10 bg-card rounded-lg flex items-center justify-center hover:bg-hero-gradient hover:text-white transition-all duration-300 shadow-soft hover:shadow-medium"
-                  >
-                    <social.icon className="w-5 h-5" />
-                  </a>
-                ))}
+                <a
+                  href="https://github.com/Abrehamgethub"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  title="GitHub"
+                  className="w-10 h-10 bg-card rounded-lg flex items-center justify-center hover:bg-hero-gradient hover:text-white transition-all duration-300 shadow-soft hover:shadow-medium"
+                >
+                  <Github className="w-5 h-5" />
+                </a>
+                <a
+                  href="https://www.linkedin.com/in/abreham-techsupport/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  title="LinkedIn"
+                  className="w-10 h-10 bg-card rounded-lg flex items-center justify-center hover:bg-hero-gradient hover:text-white transition-all duration-300 shadow-soft hover:shadow-medium"
+                >
+                  <Linkedin className="w-5 h-5" />
+                </a>
+                <a
+                  href="https://www.behance.net/abrehamkassahun"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  title="Behance"
+                  className="w-10 h-10 bg-card rounded-lg flex items-center justify-center hover:bg-hero-gradient hover:text-white transition-all duration-300 shadow-soft hover:shadow-medium"
+                >
+                  <svg viewBox="0 0 24 24" className="w-5 h-5" fill="currentColor">
+                    <path d="M6.5 4.5c0-1.1.9-2 2-2h7c1.1 0 2 .9 2 2v15c0 1.1-.9 2-2 2h-7c-1.1 0-2-.9-2-2v-15zM8.5 6v12h7V6h-7z"/>
+                    <circle cx="12" cy="9" r="1.5"/>
+                    <path d="M10 12.5h4v1h-4z"/>
+                    <path d="M10 14.5h4v1h-4z"/>
+                  </svg>
+                </a>
+                <a
+                  href="https://www.youtube.com/@abrehamkassahun917/playlists"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  title="YouTube"
+                  className="w-10 h-10 bg-card rounded-lg flex items-center justify-center hover:bg-hero-gradient hover:text-white transition-all duration-300 shadow-soft hover:shadow-medium"
+                >
+                  <Youtube className="w-5 h-5" />
+                </a>
               </div>
             </div>
           </div>
@@ -161,9 +217,10 @@ const Contact = () => {
 
                 <Button 
                   type="submit"
-                  className="w-full bg-hero-gradient hover:shadow-medium transition-all duration-300"
+                  disabled={isSubmitting}
+                  className="w-full bg-hero-gradient hover:shadow-medium transition-all duration-300 disabled:opacity-50"
                 >
-                  Send Message
+                  {isSubmitting ? "Sending..." : "Send Message"}
                 </Button>
               </form>
             </CardContent>

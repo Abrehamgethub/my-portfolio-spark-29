@@ -5,6 +5,20 @@ import { MapPin, Calendar } from "lucide-react";
 const Experience = () => {
   const experiences = [
     {
+      role: "Creative Technologist & IT Consultant",
+      company: "Self-Employed",
+      location: "Addis Ababa, Ethiopia",
+      period: "01/2024 – Present",
+      achievements: [
+        "Delivering comprehensive video editing and motion graphics services for digital campaigns",
+        "Providing specialized IT consulting services including network administration and cybersecurity",
+        "Creating engaging video content using Adobe Premiere Pro and After Effects",
+        "Building robust client relationships across creative and technology sectors",
+        "Integrating creative storytelling with technical expertise for unique digital solutions"
+      ],
+      skills: ["Video Editing", "Motion Graphics", "Adobe Creative Suite", "IT Consulting", "Project Management"]
+    },
+    {
       role: "IT Officer/Programming Instructor",
       company: "Ethiopian Education Initiatives",
       location: "Debrebirhan, Ethiopia",

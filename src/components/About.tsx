@@ -28,16 +28,17 @@ const About = () => {
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="space-y-6">
               <p className="text-lg leading-relaxed text-muted-foreground">
-                Multidisciplinary IT Support Specialist and Creative Technologist with 8+ years of experience 
-                supporting enterprise infrastructure, resolving hardware/software issues, managing helpdesks, 
-                and coordinating digital creative platforms. Certified in Google IT Support, CCNA, Cybersecurity, 
-                and Adobe Creative Suite.
+                Creative Technologist and IT Specialist with 8+ years of comprehensive experience spanning 
+                enterprise infrastructure, cybersecurity, and digital creative services. Currently operating 
+                as a self-employed consultant, delivering integrated solutions that bridge technical expertise 
+                with creative innovation.
               </p>
               
               <p className="text-lg leading-relaxed text-muted-foreground">
-                Recently expanded into creative services, delivering video editing and motion graphics 
-                content using Adobe Premiere Pro and After Effects for digital campaigns. Passionate about 
-                integrating robust IT operations with engaging digital storytelling.
+                Specialized in video editing, motion graphics, network administration, and IT consulting. 
+                Passionate about creating compelling digital narratives while maintaining robust technical 
+                foundations. Experienced in leading teams, managing complex projects, and delivering results 
+                for diverse clients from educational institutions to international organizations.
               </p>
 
               <div className="flex flex-wrap gap-3">
