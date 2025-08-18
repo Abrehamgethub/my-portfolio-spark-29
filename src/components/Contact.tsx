@@ -24,11 +24,13 @@ const Contact = () => {
     };
 
     try {
-      const { error } = await supabase
-        .from('contact_messages')
-        .insert([contactData]);
+      if (supabase) {
+        const { error } = await supabase
+          .from('contact_messages')
+          .insert([contactData]);
 
-      if (error) throw error;
+        if (error) throw error;
+      }
 
       toast({
         title: "Message sent successfully!",
