@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
-import heroImage from "@/assets/hero-bg.jpg";
 
 const Hero = () => {
+  console.log("Hero component rendering");
   const scrollToProjects = () => {
     const element = document.getElementById('projects');
     if (element) {
@@ -20,8 +20,7 @@ const Hero = () => {
     <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden">
       {/* Background Image */}
       <div 
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-        style={{ backgroundImage: `url(${heroImage})` }}
+        className="absolute inset-0 bg-gradient-to-br from-primary/20 to-accent/20"
       />
       
       {/* Gradient Overlay */}

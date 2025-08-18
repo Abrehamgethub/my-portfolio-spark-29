@@ -7,6 +7,7 @@ import Certifications from "@/components/Certifications";
 import Contact from "@/components/Contact";
 
 const Index = () => {
+  console.log("Index component rendering");
   return (
     <div className="min-h-screen bg-background">
       <Navigation />
