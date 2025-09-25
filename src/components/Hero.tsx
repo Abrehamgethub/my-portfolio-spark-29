@@ -34,12 +34,12 @@ const Hero = () => {
               Abreham Kassahun
             </span>
             <br />
-            <span className="text-foreground">IT Specialist & Support Pro</span>
+            <span className="text-foreground">Creative Technologist & AI Innovation Specialist</span>
           </h1>
           
           <p className="text-xl md:text-2xl text-muted-foreground mb-8 max-w-2xl mx-auto leading-relaxed">
-            Experienced IT professional specializing in network administration, cybersecurity, 
-            and exceptional customer support solutions.
+            Creative technologist bridging AI innovation with technical excellence. 
+            Orchestrating multi-AI workflows while delivering robust infrastructure and compelling digital experiences.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">

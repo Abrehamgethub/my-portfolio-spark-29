@@ -2,14 +2,14 @@ import { Card } from "@/components/ui/card";
 
 const About = () => {
   const skills = [
+    { name: "AI Orchestration & Multi-LLM Coordination", level: 88 },
     { name: "Network Administration", level: 95 },
-    { name: "Customer Support", level: 98 },
+    { name: "Creative Technology & Digital Media", level: 92 },
     { name: "Cybersecurity", level: 85 },
-    { name: "Python Programming", level: 80 },
-    { name: "Video Editing & Motion Graphics", level: 90 },
-    { name: "Adobe Creative Suite", level: 88 },
-    { name: "Windows Server", level: 90 },
-    { name: "Team Leadership", level: 92 }
+    { name: "Python Programming & System Design", level: 82 },
+    { name: "Customer Support & Team Leadership", level: 96 },
+    { name: "Windows Server & Infrastructure", level: 90 },
+    { name: "Adobe Creative Suite", level: 88 }
   ];
 
   return (
@@ -28,21 +28,20 @@ const About = () => {
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="space-y-6">
               <p className="text-lg leading-relaxed text-muted-foreground">
-                Creative Technologist and IT Specialist with 8+ years of comprehensive experience spanning 
-                enterprise infrastructure, cybersecurity, and digital creative services. Currently operating 
-                as a self-employed consultant, delivering integrated solutions that bridge technical expertise 
-                with creative innovation.
+                Creative Technologist and AI Innovation Specialist with 9+ years of experience at the intersection 
+                of technology, creativity, and artificial intelligence. I orchestrate multi-AI systems as collaborative 
+                partners, not just tools, while delivering enterprise-grade infrastructure and compelling digital experiences.
               </p>
               
               <p className="text-lg leading-relaxed text-muted-foreground">
-                Specialized in video editing, motion graphics, network administration, and IT consulting. 
-                Passionate about creating compelling digital narratives while maintaining robust technical 
-                foundations. Experienced in leading teams, managing complex projects, and delivering results 
-                for diverse clients from educational institutions to international organizations.
+                From coordinating teams of LLMs in AI workshops to managing complex network infrastructures, I bridge 
+                the gap between cutting-edge AI innovation and practical business solutions. My unique blend of technical 
+                depth, creative vision, and AI orchestration skills enables me to solve complex problems through both 
+                human collaboration and AI-powered workflows.
               </p>
 
               <div className="flex flex-wrap gap-3">
-                {["Network Administration", "Cybersecurity", "Python", "MDM", "Windows Server", "Active Directory", "Adobe Creative Suite", "Premiere Pro", "After Effects", "AWS", "Azure"].map((tech) => (
+                {["AI Orchestration", "Multi-LLM Coordination", "Network Administration", "Cybersecurity", "Python", "Adobe Creative Suite", "Windows Server", "AWS", "Azure", "System Design"].map((tech) => (
                   <span 
                     key={tech}
                     className="px-4 py-2 bg-card rounded-full text-sm font-medium shadow-soft hover:shadow-medium transition-all duration-300"
