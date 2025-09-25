@@ -1,6 +1,9 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Trophy, Calendar, MapPin, Users, Lightbulb, Award } from "lucide-react";
+import certificateImage from "@/assets/ai-workshop-certificate.jpg";
+import teamPhotoImage from "@/assets/ai-workshop-team-photo.jpg";
+import webAppDemoImage from "@/assets/ai-workshop-webapp-demo.png";
 
 const AIWorkshop = () => {
   const workshopDetails = {
@@ -162,20 +165,32 @@ const AIWorkshop = () => {
             <CardContent>
               <div className="grid md:grid-cols-3 gap-6">
                 <div className="text-center">
-                  <div className="bg-secondary/20 rounded-lg p-8 mb-3 flex items-center justify-center min-h-32">
-                    <span className="text-4xl">🏆</span>
+                  <div className="bg-secondary/20 rounded-lg p-2 mb-3 overflow-hidden">
+                    <img 
+                      src={certificateImage} 
+                      alt="AI Workshop Certificate of Completion for Abreham Kassahun" 
+                      className="w-full h-48 object-cover rounded-md hover:scale-105 transition-transform duration-300"
+                    />
                   </div>
                   <p className="text-sm font-medium">Certificate of Completion</p>
                 </div>
                 <div className="text-center">
-                  <div className="bg-secondary/20 rounded-lg p-8 mb-3 flex items-center justify-center min-h-32">
-                    <span className="text-4xl">👥</span>
+                  <div className="bg-secondary/20 rounded-lg p-2 mb-3 overflow-hidden">
+                    <img 
+                      src={teamPhotoImage} 
+                      alt="Team photo with Elvis Melia (facilitator) and Nahom at ALX Capstone Hub" 
+                      className="w-full h-48 object-cover rounded-md hover:scale-105 transition-transform duration-300"
+                    />
                   </div>
                   <p className="text-sm font-medium">Team Photo with Elvis & Nahom</p>
                 </div>
                 <div className="text-center">
-                  <div className="bg-secondary/20 rounded-lg p-8 mb-3 flex items-center justify-center min-h-32">
-                    <span className="text-4xl">📱</span>
+                  <div className="bg-secondary/20 rounded-lg p-2 mb-3 overflow-hidden">
+                    <img 
+                      src={webAppDemoImage} 
+                      alt="Ye'brr drone delivery web application demo screenshot" 
+                      className="w-full h-48 object-cover rounded-md hover:scale-105 transition-transform duration-300"
+                    />
                   </div>
                   <p className="text-sm font-medium">Web App Demo Screenshot</p>
                 </div>
