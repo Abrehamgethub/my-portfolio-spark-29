@@ -45,6 +45,18 @@ const Experience = () => {
       skills: ["Team Leadership", "KPI Management", "Customer Support", "Process Optimization"]
     },
     {
+      role: "IT Supervisor",
+      company: "Shemu Group",
+      location: "Addis Ababa, Ethiopia",
+      period: "02/2018 – 07/2018",
+      achievements: [
+        "Supported Microsoft Dynamics 365 ERP, managing user access roles, data accuracy, and system workflows",
+        "Provided ICT troubleshooting for business-critical systems and office networks",
+        "Maintained reporting and system documentation for compliance"
+      ],
+      skills: ["Microsoft Dynamics 365", "ERP Administration", "ICT Support", "System Documentation", "Compliance"]
+    },
+    {
       role: "IT Support Technician",
       company: "Net&Com plc",
       location: "Addis Ababa, Ethiopia",
@@ -71,7 +83,7 @@ const Experience = () => {
           </p>
         </div>
 
-        <div className="max-w-4xl mx-auto space-y-8">
+        <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-8">
           {experiences.map((experience, index) => (
             <Card 
               key={index}
