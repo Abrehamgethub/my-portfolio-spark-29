@@ -32,17 +32,18 @@ const Experience = () => {
       skills: ["MDM", "Python", "Google Workspace", "Customer Support"]
     },
     {
-      role: "Customer Support Team Lead",
+      role: "ICT Infrastructure & Security Engineer",
       company: "Hikma Electronics plc",
       location: "Addis Ababa, Ethiopia", 
       period: "07/2018 – 02/2024",
       achievements: [
-        "Led a team of 8 remote customer support associates, maintaining 92% customer satisfaction score across 5+ years",
-        "Ensured timely resolution across multiple platforms, achieving 85% same-day ticket closure rate",
-        "Set and tracked key performance indicators (KPIs) resulting in 35% improvement in team efficiency",
-        "Optimized workflows through process automation and comprehensive team training programs, reducing average resolution time by 40%"
+        "Designed and maintained secure IT infrastructure including firewalls, servers, and access control systems for 20+ enterprise clients, achieving 99.5% uptime",
+        "Implemented comprehensive data protection measures: end-to-end encryption, automated backup policies, and disaster recovery protocols—reducing data loss incidents by 85%",
+        "Conducted quarterly vulnerability assessments and coordinated patch management across 200+ servers and applications, maintaining zero critical breaches",
+        "Supported internal and external audits by documenting security controls aligned with ISO 27001 standards, ensuring full compliance across 6 consecutive audits",
+        "Led incident response for network outages, malware infections, and unauthorized access attempts, achieving average containment time of under 30 minutes with 100% recovery rate"
       ],
-      skills: ["Team Leadership", "KPI Management", "Customer Support", "Process Optimization"]
+      skills: ["Network Security", "Infrastructure Design", "ISO 27001", "Vulnerability Assessment", "Incident Response", "Data Protection", "Disaster Recovery"]
     },
     {
       role: "IT Supervisor",
