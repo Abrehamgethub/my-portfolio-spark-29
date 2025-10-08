@@ -27,17 +27,19 @@ const About = () => {
 
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="space-y-6">
-              <p className="text-lg leading-relaxed text-muted-foreground">
-                Creative Technologist and AI Innovation Specialist with 9+ years of experience at the intersection 
-                of technology, creativity, and artificial intelligence. I orchestrate multi-AI systems as collaborative 
-                partners, not just tools, while delivering enterprise-grade infrastructure and compelling digital experiences.
+            <p className="text-lg leading-relaxed text-muted-foreground">
+                <strong>Creative Technologist and AI Innovation Specialist</strong> with 9+ years driving digital transformation 
+                at the intersection of technology, creativity, and artificial intelligence. I orchestrate multi-AI systems as 
+                strategic partners—not just tools—while delivering enterprise-grade infrastructure and compelling digital experiences 
+                that measurably improve business operations.
               </p>
               
               <p className="text-lg leading-relaxed text-muted-foreground">
-                From coordinating teams of LLMs in AI workshops to managing complex network infrastructures, I bridge 
-                the gap between cutting-edge AI innovation and practical business solutions. My unique blend of technical 
-                depth, creative vision, and AI orchestration skills enables me to solve complex problems through both 
-                human collaboration and AI-powered workflows.
+                From coordinating teams of LLMs in AI workshops to architecting secure network infrastructures for major financial 
+                institutions, I translate cutting-edge AI innovation into practical business solutions. My technical depth spans 
+                <strong> data center modernization (40% uptime improvement)</strong>, <strong>ERP optimization (25% error reduction)</strong>, 
+                and <strong>large-scale network deployments (1500+ workstations)</strong>—complemented by creative excellence in 
+                Adobe Creative Suite for impactful digital campaigns.
               </p>
 
               <div className="flex flex-wrap gap-3">

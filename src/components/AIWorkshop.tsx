@@ -65,7 +65,7 @@ const AIWorkshop = () => {
             AI Projects & <span className="bg-hero-gradient bg-clip-text text-transparent">Hackathons</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Orchestrating Multi-AI Collaboration for Innovation
+            Orchestrating Multi-AI Collaboration for Real-World Business Innovation
           </p>
         </div>
 
@@ -77,10 +77,11 @@ const AIWorkshop = () => {
                 <div className="flex-1">
                   <CardTitle className="text-2xl mb-4">{workshopDetails.title}</CardTitle>
                   <p className="text-muted-foreground mb-4 leading-relaxed">
-                    I participated in a full-day workshop and hackathon facilitated by <strong>{workshopDetails.facilitator}</strong>, 
-                    focused on <em>{workshopDetails.focus}</em>. Paired with my teammate <strong>{workshopDetails.teammate}</strong>, 
-                    we built and tested structured workflows to coordinate multiple AI systems, developing an innovative 
-                    drone-assisted delivery solution for Addis Ababa through strategic AI orchestration.
+                    Participated in an intensive full-day workshop and hackathon facilitated by <strong>{workshopDetails.facilitator}</strong> 
+                    at ALX Capstone Hub, focused on <em>{workshopDetails.focus}</em>. Partnering with <strong>{workshopDetails.teammate}</strong>, 
+                    we architected structured workflows coordinating multiple AI systems as collaborative partners—demonstrating strategic 
+                    AI orchestration by developing an innovative drone-assisted delivery solution (Ye'brr) for Addis Ababa that addressed 
+                    real urban logistics challenges through human-AI teamwork.
                   </p>
                   <div className="flex flex-col sm:flex-row gap-4 text-sm text-muted-foreground">
                     <div className="flex items-center gap-2">

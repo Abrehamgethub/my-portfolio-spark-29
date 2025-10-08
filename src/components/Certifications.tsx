@@ -171,7 +171,7 @@ const Certifications = () => {
             Education & <span className="bg-hero-gradient bg-clip-text text-transparent">Certifications</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Continuous learning and professional development in IT and customer service
+            Committed to continuous learning through professional certifications spanning cloud computing, cybersecurity, network administration, and emerging technologies
           </p>
         </div>
 

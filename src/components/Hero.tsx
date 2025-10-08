@@ -38,8 +38,8 @@ const Hero = () => {
           </h1>
           
           <p className="text-xl md:text-2xl text-muted-foreground mb-8 max-w-2xl mx-auto leading-relaxed">
-            Creative technologist bridging AI innovation with technical excellence. 
-            Orchestrating multi-AI workflows while delivering robust infrastructure and compelling digital experiences.
+            Bridging AI innovation with enterprise-grade technical excellence. 
+            9+ years orchestrating multi-AI workflows, delivering robust infrastructure, and creating compelling digital experiences that drive measurable business impact.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">

@@ -69,9 +69,10 @@ const Contact = () => {
             <div>
               <h3 className="text-2xl font-bold mb-6">Let's Connect</h3>
               <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
-                I'm always excited to work on new IT projects and creative collaborations. 
-                Whether you need network administration, customer support solutions, team leadership, 
-                or video editing and motion graphics for digital campaigns, feel free to reach out!
+                I'm always excited to collaborate on transformative IT projects and creative initiatives. 
+                Whether you need enterprise network architecture, AI orchestration, data center optimization, 
+                ERP administration, team leadership, or compelling video content for digital campaigns—let's 
+                discuss how we can drive measurable impact together.
               </p>
             </div>
 
