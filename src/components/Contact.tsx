@@ -25,11 +25,22 @@ const Contact = () => {
 
     try {
       if (supabase) {
-        const { error } = await supabase
+        // Save to database
+        const { error: dbError } = await supabase
           .from('contact_messages')
           .insert([contactData]);
 
-        if (error) throw error;
+        if (dbError) throw dbError;
+
+        // Send email notification
+        const { error: emailError } = await supabase.functions.invoke('send-contact-email', {
+          body: contactData
+        });
+
+        if (emailError) {
+          console.error('Email notification error:', emailError);
+          // Don't throw - message was still saved to database
+        }
       }
 
       toast({

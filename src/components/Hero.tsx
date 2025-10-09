@@ -34,7 +34,7 @@ const Hero = () => {
               Abreham Kassahun
             </span>
             <br />
-            <span className="text-foreground">Creative Technologist & AI Innovation Specialist</span>
+            <span className="text-foreground">Senior IT Infrastructure & Security Leader | AI Innovation Specialist</span>
           </h1>
           
           <p className="text-xl md:text-2xl text-muted-foreground mb-8 max-w-2xl mx-auto leading-relaxed">
