@@ -32,7 +32,7 @@ const Experience = () => {
       skills: ["MDM", "Python", "Google Workspace", "Customer Support"]
     },
     {
-      role: "ICT Infrastructure & Security Engineer",
+      role: "Senior IT Infrastructure & Security Engineer | Team Leader",
       company: "Hikma Electronics plc",
       location: "Addis Ababa, Ethiopia", 
       period: "07/2018 – 02/2024",
