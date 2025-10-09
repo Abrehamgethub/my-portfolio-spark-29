@@ -44,6 +44,16 @@ const Projects = () => {
       tags: ["IT Automation", "Ticketing Systems", "Documentation", "Service Optimization"],
       icon: "🚀",
       type: "key"
+    },
+    {
+      title: "Multi-AI Orchestration & Hackathon",
+      organization: "ALX Capstone Hub",
+      timeline: "September 2025",
+      description: "Orchestrated collaboration between Gemini, ChatGPT, DeepSeek, and v0 AI to develop Ye'brr—a drone-assisted delivery solution for Addis Ababa. Built structured workflows where each AI system performed distinct roles (research, design, validation, development), culminating in a functional web app prototype and executive pitch.",
+      impact: "Award-winning solution • 3-minute CEO pitch • Full MVP delivered",
+      tags: ["AI Orchestration", "System Design", "Hackathon", "MVP Development", "Strategic Teamwork"],
+      icon: "🤖",
+      type: "key"
     }
   ];
 
