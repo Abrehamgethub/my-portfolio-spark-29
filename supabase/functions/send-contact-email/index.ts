@@ -113,7 +113,7 @@ const handler = async (req: Request): Promise<Response> => {
       // 2. Notification email to your team
       {
         from: "Portfolio Contact <onboarding@resend.dev>", // Update this after verifying your domain
-        to: ["team@example.com"], // Update with your team email
+        to: ["akabrehamkassahun@gmail.com"],
         subject: `New Contact Form Submission: ${escapeHtml(subject)}`,
         html: `
           <h2>New Contact Form Submission</h2>
