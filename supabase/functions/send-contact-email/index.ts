@@ -90,24 +90,44 @@ const handler = async (req: Request): Promise<Response> => {
 
     console.log("Contact message stored successfully");
 
-    // Send email notification to you (the portfolio owner)
-    // Escape HTML to prevent XSS in email
-    const emailResponse = await resend.emails.send({
-      from: "Portfolio Contact <onboarding@resend.dev>", // Update this after verifying your domain
-      to: ["your-email@example.com"], // IMPORTANT: Update this with your actual email
-      subject: `New Contact Form Submission: ${escapeHtml(subject)}`,
-      html: `
-        <h2>New Contact Form Submission</h2>
-        <p><strong>From:</strong> ${escapeHtml(name)}</p>
-        <p><strong>Email:</strong> ${escapeHtml(email)}</p>
-        <p><strong>Subject:</strong> ${escapeHtml(subject)}</p>
-        <hr />
-        <p><strong>Message:</strong></p>
-        <p>${escapeHtml(message).replace(/\n/g, '<br>')}</p>
-      `,
-    });
+    // Send both emails: confirmation to user and notification to team
+    // Using batch send for efficiency
+    const emailResponse = await resend.batch.send([
+      // 1. Confirmation email to the user
+      {
+        from: "Portfolio Contact <onboarding@resend.dev>", // Update this after verifying your domain
+        to: [email],
+        subject: "Thank you for contacting us!",
+        html: `
+          <h2>Thank You for Reaching Out!</h2>
+          <p>Hi ${escapeHtml(name)},</p>
+          <p>We've received your message and will get back to you as soon as possible.</p>
+          <hr />
+          <p><strong>Your message:</strong></p>
+          <p><strong>Subject:</strong> ${escapeHtml(subject)}</p>
+          <p>${escapeHtml(message).replace(/\n/g, '<br>')}</p>
+          <hr />
+          <p>Best regards,<br>The Team</p>
+        `,
+      },
+      // 2. Notification email to your team
+      {
+        from: "Portfolio Contact <onboarding@resend.dev>", // Update this after verifying your domain
+        to: ["team@example.com"], // Update with your team email
+        subject: `New Contact Form Submission: ${escapeHtml(subject)}`,
+        html: `
+          <h2>New Contact Form Submission</h2>
+          <p><strong>From:</strong> ${escapeHtml(name)}</p>
+          <p><strong>Email:</strong> ${escapeHtml(email)}</p>
+          <p><strong>Subject:</strong> ${escapeHtml(subject)}</p>
+          <hr />
+          <p><strong>Message:</strong></p>
+          <p>${escapeHtml(message).replace(/\n/g, '<br>')}</p>
+        `,
+      },
+    ]);
 
-    console.log("Email sent successfully:", emailResponse);
+    console.log("Emails sent successfully:", emailResponse);
 
     return new Response(JSON.stringify({ success: true, emailResponse }), {
       status: 200,
