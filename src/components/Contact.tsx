@@ -4,7 +4,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/components/ui/use-toast";
 import { Mail, Phone, MapPin, Github, Linkedin, Youtube } from "lucide-react";
-import { supabase, type ContactMessage } from "@/lib/supabase";
+import { supabase } from "@/integrations/supabase/client";
 import { useState } from "react";
 
 const Contact = () => {
@@ -16,7 +16,7 @@ const Contact = () => {
     setIsSubmitting(true);
 
     const formData = new FormData(e.currentTarget);
-    const contactData: ContactMessage = {
+    const data = {
       name: formData.get('name') as string,
       email: formData.get('email') as string,
       subject: formData.get('subject') as string,
@@ -24,24 +24,12 @@ const Contact = () => {
     };
 
     try {
-      if (supabase) {
-        // Save to database
-        const { error: dbError } = await supabase
-          .from('contact_messages')
-          .insert([contactData]);
+      // Send to edge function which handles validation, storage, and email
+      const { data: result, error } = await supabase.functions.invoke('send-contact-email', {
+        body: data
+      });
 
-        if (dbError) throw dbError;
-
-        // Send email notification
-        const { error: emailError } = await supabase.functions.invoke('send-contact-email', {
-          body: contactData
-        });
-
-        if (emailError) {
-          console.error('Email notification error:', emailError);
-          // Don't throw - message was still saved to database
-        }
-      }
+      if (error) throw error;
 
       toast({
         title: "Message sent successfully!",
