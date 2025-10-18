@@ -74,10 +74,18 @@ const Certifications = () => {
 
   const credlyBadges = [
     {
+      title: "Implement Load Balancing on Compute Engine Skill Badge",
+      issuer: "Google Cloud",
+      date: "Oct 17, 2025",
+      image: "https://images.credly.com/images/eea11cba-2a98-4bbe-bad2-447878dd34a2/image.png",
+      credlyUrl: "https://www.credly.com/users/abreham-kassahun/badges",
+      description: "Practical skills in implementing and configuring load balancing solutions on Google Compute Engine"
+    },
+    {
       title: "AWS Educate Introduction to Generative AI",
       issuer: "Amazon Web Services Training and Certification",
       date: "Aug 14, 2025",
-      image: "https://images.credly.com/images/4b68a030-53d0-414b-be57-b1837bc3b3e6/image.png",
+      image: "https://images.credly.com/images/e50c657a-edd9-4c93-b1cf-2b6634b54abf/blob",
       credlyUrl: "https://www.credly.com/users/abreham-kassahun/badges",
       description: "Foundational knowledge of generative AI concepts, applications, and AWS services supporting AI/ML workloads"
     },
@@ -85,7 +93,7 @@ const Certifications = () => {
       title: "AWS Educate Getting Started with Serverless",
       issuer: "Amazon Web Services Training and Certification", 
       date: "Aug 13, 2025",
-      image: "https://images.credly.com/images/629a2bb9-14a6-47b3-b17e-f1056b1404d0/image.png",
+      image: "https://images.credly.com/images/25108813-2dd7-45f7-8158-65689b8526b5/blob",
       credlyUrl: "https://www.credly.com/users/abreham-kassahun/badges",
       description: "Understanding of serverless computing concepts and AWS Lambda functions"
     },
@@ -93,7 +101,7 @@ const Certifications = () => {
       title: "AWS Educate Getting Started with Security",
       issuer: "Amazon Web Services Training and Certification",
       date: "Aug 11, 2025", 
-      image: "https://images.credly.com/images/80845928-d1f8-4549-ae9d-27676fba897e/image.png",
+      image: "https://images.credly.com/images/fc6fa322-80f4-45a5-9def-91e9bcfde837/blob",
       credlyUrl: "https://www.credly.com/users/abreham-kassahun/badges",
       description: "Fundamentals of cloud security, AWS security services, and best practices"
     },
@@ -101,7 +109,7 @@ const Certifications = () => {
       title: "AWS Educate Getting Started with Cloud Ops",
       issuer: "Amazon Web Services Training and Certification",
       date: "Aug 10, 2025",
-      image: "https://images.credly.com/images/01c3b0d4-a225-483b-a762-460473658c1a/image.png", 
+      image: "https://images.credly.com/images/4251ab91-6d67-47da-801c-855c0bbc6cc3/blob", 
       credlyUrl: "https://www.credly.com/users/abreham-kassahun/badges",
       description: "Cloud operations, monitoring, and management using AWS services"
     },
@@ -117,7 +125,7 @@ const Certifications = () => {
       title: "AWS Educate Getting Started with Databases",
       issuer: "Amazon Web Services Training and Certification",
       date: "Jun 7, 2025",
-      image: "https://images.credly.com/images/6f135924-7645-4bd2-ab68-3bc0b49c7e27/image.png",
+      image: "https://images.credly.com/images/a08cf90b-9838-4f6c-82bd-8db85fb89dd5/blob",
       credlyUrl: "https://www.credly.com/users/abreham-kassahun/badges",
       description: "Database concepts and AWS database services including RDS and DynamoDB"
     },
@@ -125,15 +133,31 @@ const Certifications = () => {
       title: "AWS Educate Getting Started with Networking",
       issuer: "Amazon Web Services Training and Certification", 
       date: "Jun 3, 2025",
-      image: "https://images.credly.com/images/979e42e2-1d32-4d21-97ea-53d991ea50fb/image.png",
+      image: "https://images.credly.com/images/f5095707-7683-4886-940c-3e8e4a2085ca/blob",
       credlyUrl: "https://www.credly.com/users/abreham-kassahun/badges",
       description: "Networking fundamentals and AWS VPC, subnets, and routing concepts"
+    },
+    {
+      title: "AWS Educate Getting Started with Compute",
+      issuer: "Amazon Web Services Training and Certification",
+      date: "May 31, 2025",
+      image: "https://images.credly.com/images/7b08cc0e-064b-407d-b70e-323509c3e474/blob",
+      credlyUrl: "https://www.credly.com/users/abreham-kassahun/badges",
+      description: "Foundational compute concepts and AWS EC2 instances, autoscaling, and load balancing"
+    },
+    {
+      title: "AWS Educate Getting Started with Storage",
+      issuer: "Amazon Web Services Training and Certification",
+      date: "May 30, 2025",
+      image: "https://images.credly.com/images/3b1b42e6-dfc2-492b-90df-8058096cb93d/blob",
+      credlyUrl: "https://www.credly.com/users/abreham-kassahun/badges",
+      description: "Storage fundamentals and AWS S3, EBS, and storage optimization strategies"
     },
     {
       title: "AWS Educate Introduction to Cloud 101",
       issuer: "Amazon Web Services Training and Certification",
       date: "May 27, 2025", 
-      image: "https://images.credly.com/images/8d67bbf4-128b-4141-b5f1-1bc61bbfbaa6/image.png",
+      image: "https://images.credly.com/images/e51a8579-188d-4363-8ed1-12ad164ef57b/blob",
       credlyUrl: "https://www.credly.com/users/abreham-kassahun/badges",
       description: "Introduction to cloud computing concepts and AWS core services"
     },
@@ -157,7 +181,7 @@ const Certifications = () => {
       title: "AWS Cloud Quest: Cloud Practitioner", 
       issuer: "Amazon Web Services Training and Certification",
       date: "2023",
-      image: "https://images.credly.com/images/2784d0d8-327c-406f-971e-9f0e15097003/image.png",
+      image: "https://images.credly.com/images/30816e43-2550-4e1c-be22-3f03c5573bb9/blob",
       credlyUrl: "https://www.credly.com/users/abreham-kassahun/badges",
       description: "Practical cloud skills through hands-on AWS scenarios and solutions"
     }
