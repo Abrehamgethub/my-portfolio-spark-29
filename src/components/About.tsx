@@ -6,10 +6,10 @@ const About = () => {
     { name: "Network Administration & CCNA", level: 95 },
     { name: "IT Support & System Administration", level: 93 },
     { name: "Cloud Operations & Infrastructure", level: 90 },
+    { name: "Google Cloud Platform (GCP)", level: 85 },
     { name: "Cybersecurity & Security", level: 86 },
     { name: "Database Management", level: 84 },
-    { name: "Serverless Computing", level: 82 },
-    { name: "Load Balancing & Compute", level: 80 }
+    { name: "Serverless Computing", level: 82 }
   ];
 
   return (

@@ -26,6 +26,13 @@ const Certifications = () => {
       description: "Threat detection, defense mechanisms, global implications of cyber threats, and industry best practices"
     },
     {
+      title: "Google Cloud Fundamentals: Core Infrastructure",
+      provider: "Google Cloud",
+      period: "2024 – 2025",
+      icon: "☁️",
+      description: "Core infrastructure components, computing services, storage options, and networking in Google Cloud Platform"
+    },
+    {
       title: "AWS Cloud Practitioner Essentials",
       provider: "AWS Skill Builder",
       period: "Jan 2023 – Mar 2023",
