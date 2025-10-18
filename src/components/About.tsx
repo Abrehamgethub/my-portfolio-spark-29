@@ -2,14 +2,14 @@ import { Card } from "@/components/ui/card";
 
 const About = () => {
   const skills = [
-    { name: "AWS Cloud Architecture & Services", level: 92 },
+    { name: "AWS Cloud Services & Architecture", level: 94 },
     { name: "Network Administration & CCNA", level: 95 },
-    { name: "Cloud Operations & Infrastructure", level: 90 },
-    { name: "Cybersecurity & Threat Management", level: 88 },
-    { name: "Serverless & Database Management", level: 85 },
-    { name: "Generative AI & Multi-LLM Systems", level: 87 },
     { name: "IT Support & System Administration", level: 93 },
-    { name: "Creative Technology & Digital Media", level: 89 }
+    { name: "Cloud Operations & Infrastructure", level: 90 },
+    { name: "Cybersecurity & Security", level: 86 },
+    { name: "Database Management", level: 84 },
+    { name: "Serverless Computing", level: 82 },
+    { name: "Load Balancing & Compute", level: 80 }
   ];
 
   return (
@@ -43,7 +43,7 @@ const About = () => {
               </p>
 
               <div className="flex flex-wrap gap-3">
-                {["AWS Cloud", "Google Cloud", "Serverless", "Cloud Security", "Network Administration", "CCNA", "Cybersecurity", "Generative AI", "Load Balancing", "Database Management", "IT Support", "Adobe Creative Suite"].map((tech) => (
+                {["AWS Cloud", "Google Cloud", "CCNA", "Network Administration", "Cloud Operations", "IT Support", "Cybersecurity", "Serverless", "Load Balancing", "Databases", "Linux", "Cloud Security"].map((tech) => (
                   <span 
                     key={tech}
                     className="px-4 py-2 bg-card rounded-full text-sm font-medium shadow-soft hover:shadow-medium transition-all duration-300"
