@@ -2,14 +2,14 @@ import { Card } from "@/components/ui/card";
 
 const About = () => {
   const skills = [
-    { name: "AI Orchestration & Multi-LLM Coordination", level: 88 },
-    { name: "Network Administration", level: 95 },
-    { name: "Creative Technology & Digital Media", level: 92 },
-    { name: "Cybersecurity", level: 85 },
-    { name: "Python Programming & System Design", level: 82 },
-    { name: "Customer Support & Team Leadership", level: 96 },
-    { name: "Windows Server & Infrastructure", level: 90 },
-    { name: "Adobe Creative Suite", level: 88 }
+    { name: "AWS Cloud Architecture & Services", level: 92 },
+    { name: "Network Administration & CCNA", level: 95 },
+    { name: "Cloud Operations & Infrastructure", level: 90 },
+    { name: "Cybersecurity & Threat Management", level: 88 },
+    { name: "Serverless & Database Management", level: 85 },
+    { name: "Generative AI & Multi-LLM Systems", level: 87 },
+    { name: "IT Support & System Administration", level: 93 },
+    { name: "Creative Technology & Digital Media", level: 89 }
   ];
 
   return (
@@ -43,7 +43,7 @@ const About = () => {
               </p>
 
               <div className="flex flex-wrap gap-3">
-                {["AI Orchestration", "Multi-LLM Coordination", "Network Administration", "Cybersecurity", "Python", "Adobe Creative Suite", "Windows Server", "AWS", "Azure", "System Design"].map((tech) => (
+                {["AWS Cloud", "Google Cloud", "Serverless", "Cloud Security", "Network Administration", "CCNA", "Cybersecurity", "Generative AI", "Load Balancing", "Database Management", "IT Support", "Adobe Creative Suite"].map((tech) => (
                   <span 
                     key={tech}
                     className="px-4 py-2 bg-card rounded-full text-sm font-medium shadow-soft hover:shadow-medium transition-all duration-300"
