@@ -81,6 +81,30 @@ const Certifications = () => {
 
   const credlyBadges = [
     {
+      title: "Prompt Design in Vertex AI Skill Badge",
+      issuer: "Google Cloud",
+      date: "Oct 31, 2025",
+      image: "https://images.credly.com/images/cef82b2e-970a-4318-8e59-c3e26b7f5c19/image.png",
+      credlyUrl: "https://www.credly.com/users/abreham-kassahun/badges",
+      description: "Expertise in designing effective prompts for AI models using Google Cloud's Vertex AI platform"
+    },
+    {
+      title: "Prepare Data for ML APIs on Google Cloud Skill Badge",
+      issuer: "Google Cloud",
+      date: "Oct 29, 2025",
+      image: "https://images.credly.com/images/68756311-9319-4eeb-a2b7-76defc8dd8a2/image.png",
+      credlyUrl: "https://www.credly.com/users/abreham-kassahun/badges",
+      description: "Skills in preparing and processing data for machine learning APIs on Google Cloud Platform"
+    },
+    {
+      title: "Set Up an App Dev Environment on Google Cloud Skill Badge",
+      issuer: "Google Cloud",
+      date: "Oct 22, 2025",
+      image: "https://images.credly.com/images/42326d44-14ff-4eda-b9c5-7d8f12919253/image.png",
+      credlyUrl: "https://www.credly.com/users/abreham-kassahun/badges",
+      description: "Proficiency in configuring and managing application development environments on Google Cloud"
+    },
+    {
       title: "Implement Load Balancing on Compute Engine Skill Badge",
       issuer: "Google Cloud",
       date: "Oct 17, 2025",
