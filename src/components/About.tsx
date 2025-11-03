@@ -1,4 +1,5 @@
 import { Card } from "@/components/ui/card";
+import profilePhoto from "@/assets/profile-photo.jpg";
 
 const About = () => {
   const skills = [
@@ -23,6 +24,21 @@ const About = () => {
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
               Passionate about creating exceptional digital experiences
             </p>
+          </div>
+
+          {/* Profile Photo Section */}
+          <div className="flex justify-center mb-12 animate-fade-in">
+            <div className="relative group">
+              <div className="absolute -inset-1 bg-hero-gradient rounded-2xl blur-2xl opacity-20 group-hover:opacity-40 transition-all duration-500"></div>
+              <div className="relative">
+                <div className="absolute inset-0 bg-hero-gradient rounded-2xl opacity-5"></div>
+                <img 
+                  src={profilePhoto} 
+                  alt="Abreham Kassahun - Senior IT Infrastructure & Security Leader"
+                  className="relative rounded-2xl w-full max-w-sm mx-auto shadow-elegant hover:scale-[1.02] transition-transform duration-500 border-2 border-primary/10"
+                />
+              </div>
+            </div>
           </div>
 
           <div className="grid md:grid-cols-2 gap-12 items-center">
