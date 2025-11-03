@@ -26,40 +26,40 @@ const About = () => {
             </p>
           </div>
 
-          {/* Tech Avatar Section */}
-          <div className="flex justify-center mb-12 animate-fade-in">
-            <div className="relative group">
-              {/* Animated gradient ring */}
-              <div className="absolute -inset-2 bg-gradient-to-r from-primary via-accent to-primary rounded-full blur-xl opacity-40 group-hover:opacity-70 transition-all duration-500 animate-pulse"></div>
-              
-              {/* Secondary glow */}
-              <div className="absolute -inset-1 bg-hero-gradient rounded-full blur-md opacity-50"></div>
-              
-              <div className="relative">
-                {/* Tech border effect */}
-                <div className="absolute inset-0 rounded-full bg-gradient-to-br from-primary/30 via-accent/30 to-primary/30 p-1">
-                  <div className="w-full h-full rounded-full bg-background"></div>
-                </div>
+          <div className="grid md:grid-cols-2 gap-12 items-start">
+            {/* Tech Avatar Section */}
+            <div className="flex justify-center animate-fade-in">
+              <div className="relative group">
+                {/* Animated gradient ring */}
+                <div className="absolute -inset-2 bg-gradient-to-r from-primary via-accent to-primary rounded-full blur-xl opacity-40 group-hover:opacity-70 transition-all duration-500 animate-pulse"></div>
                 
-                {/* Avatar image */}
-                <img 
-                  src={profilePhoto} 
-                  alt="Abreham Kassahun - Tech Professional"
-                  className="relative rounded-full w-48 h-48 md:w-64 md:h-64 object-cover shadow-elegant hover:scale-105 transition-all duration-500 border-4 border-background ring-2 ring-primary/20"
-                />
+                {/* Secondary glow */}
+                <div className="absolute -inset-1 bg-hero-gradient rounded-full blur-md opacity-50"></div>
                 
-                {/* Tech badge overlay */}
-                <div className="absolute -bottom-2 -right-2 bg-hero-gradient rounded-full p-3 shadow-medium border-4 border-background group-hover:scale-110 transition-transform duration-300">
-                  <svg className="w-6 h-6 text-primary-foreground" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
-                  </svg>
+                <div className="relative">
+                  {/* Tech border effect */}
+                  <div className="absolute inset-0 rounded-full bg-gradient-to-br from-primary/30 via-accent/30 to-primary/30 p-1">
+                    <div className="w-full h-full rounded-full bg-background"></div>
+                  </div>
+                  
+                  {/* Avatar image */}
+                  <img 
+                    src={profilePhoto} 
+                    alt="Abreham Kassahun - Tech Professional"
+                    className="relative rounded-full w-64 h-64 lg:w-80 lg:h-80 object-cover shadow-elegant hover:scale-105 transition-all duration-500 border-4 border-background ring-2 ring-primary/20"
+                  />
+                  
+                  {/* Tech badge overlay */}
+                  <div className="absolute -bottom-2 -right-2 bg-hero-gradient rounded-full p-3 shadow-medium border-4 border-background group-hover:scale-110 transition-transform duration-300">
+                    <svg className="w-6 h-6 text-primary-foreground" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+                    </svg>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
 
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div className="space-y-6">
+            <div className="space-y-6 animate-fade-in">
             <p className="text-lg leading-relaxed text-muted-foreground">
                 <strong>Creative Technologist and AI Innovation Specialist</strong> with 9+ years driving digital transformation 
                 at the intersection of technology, creativity, and artificial intelligence. I orchestrate multi-AI systems as 
