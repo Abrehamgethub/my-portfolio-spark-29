@@ -6,70 +6,67 @@ const Experience = () => {
   const experiences = [
     {
       role: "Creative Technologist & IT Consultant",
-      company: "Self-Employed",
+      company: "Freelance (Remote / Local SMEs)",
       location: "Addis Ababa, Ethiopia",
-      period: "01/2024 – Present",
+      period: "07/2024 – Present",
       achievements: [
-        "Delivered comprehensive video editing and motion graphics services for 15+ digital campaigns across creative and corporate sectors",
-        "Provided specialized IT consulting including network administration, cybersecurity assessments, and infrastructure optimization for Ethiopian businesses",
-        "Created engaging video content using Adobe Premiere Pro and After Effects with 95% client satisfaction rate",
-        "Built strategic client relationships spanning creative agencies, educational institutions, and technology companies",
-        "Integrated creative storytelling with technical expertise to deliver unique, measurable digital solutions"
+        "Designed and optimized digital communication platforms for small businesses and institutions",
+        "Delivered visual storytelling and multimedia content for campaigns, achieving 95% client satisfaction",
+        "Provided ICT consulting for local entrepreneurs—digitalizing workflows and enhancing online presence",
+        "Supported knowledge management and documentation using Notion, Odoo, and Microsoft 365 ecosystems"
       ],
-      skills: ["Video Editing", "Motion Graphics", "Adobe Creative Suite", "IT Consulting", "Project Management"]
+      skills: ["Digital Strategy", "Multimedia Content", "IT Consulting", "Workflow Optimization", "Knowledge Management"]
     },
     {
-      role: "IT Officer/Programming Instructor",
-      company: "Ethiopian Education Initiatives",
+      role: "IT Officer & Programming Instructor",
+      company: "Ethiopian Education Initiatives (HaileManas Academy)",
       location: "Debrebirhan, Ethiopia",
-      period: "02/2024 – Present",
+      period: "02/2024 – 07/2024",
       achievements: [
-        "Managed 350+ iPad and Mac users through Mobile Device Management (MDM), achieving 99% uptime and seamless Google Workspace integration",
-        "Delivered comprehensive Python programming curriculum to high school students, equipping 350+ students with foundational coding skills",
-        "Reduced IT response time by 30% through automated ticketing system and technical documentation library implementation",
-        "Handled 50+ support tickets weekly across multiple channels with 95% first-contact resolution rate"
+        "Managed 350+ iPads and Mac devices through MDM with 99% uptime and secure Google Workspace integration",
+        "Taught Python programming to over 350 students, emphasizing problem-solving and computational thinking",
+        "Introduced automated IT ticketing and documentation systems, reducing resolution time by 30% and achieving 95% first-contact resolution"
       ],
-      skills: ["MDM", "Python", "Google Workspace", "Customer Support"]
+      skills: ["MDM", "Python Programming", "Google Workspace", "IT Support", "Documentation"]
     },
     {
-      role: "Senior IT Infrastructure & Security Engineer | Team Leader",
+      role: "ICT Infrastructure & VAS Integration Engineer",
       company: "Hikma Electronics plc",
       location: "Addis Ababa, Ethiopia", 
       period: "07/2018 – 02/2024",
       achievements: [
-        "Designed and maintained secure IT infrastructure including firewalls, servers, and access control systems for 20+ enterprise clients, achieving 99.5% uptime",
-        "Implemented comprehensive data protection measures: end-to-end encryption, automated backup policies, and disaster recovery protocols—reducing data loss incidents by 85%",
-        "Conducted quarterly vulnerability assessments and coordinated patch management across 200+ servers and applications, maintaining zero critical breaches",
-        "Supported internal and external audits by documenting security controls aligned with ISO 27001 standards, ensuring full compliance across 6 consecutive audits",
-        "Led incident response for network outages, malware infections, and unauthorized access attempts, achieving average containment time of under 30 minutes with 100% recovery rate"
+        "Designed and maintained enterprise LAN/WAN systems for 20+ business clients, achieving 99.5% uptime",
+        "Configured Windows-based servers, managed DHCP, DNS, and shared resource permissions across departments",
+        "Implemented network monitoring and troubleshooting protocols that reduced downtime by 30%",
+        "Documented system configurations, updates, and hardware inventory for IT audits",
+        "Coordinated with vendors on hardware and network upgrades ensuring SLA compliance"
       ],
-      skills: ["Network Security", "Infrastructure Design", "ISO 27001", "Vulnerability Assessment", "Incident Response", "Data Protection", "Disaster Recovery"]
+      skills: ["LAN/WAN Design", "Windows Server", "DHCP/DNS", "Network Monitoring", "Vendor Management", "Documentation"]
     },
     {
       role: "IT Supervisor",
       company: "Shemu Group",
-      location: "Addis Ababa, Ethiopia",
-      period: "02/2018 – 07/2018",
+      location: "Addis Ababa, Ethiopia / Online",
+      period: "11/2022 – 07/2023 (Online) | 02/2018 – 07/2018 (Onsite)",
       achievements: [
-        "Administered Microsoft Dynamics 365 ERP system, managing user access roles, data accuracy, and system workflows resulting in 25% reduction in operational errors",
-        "Provided ICT troubleshooting for business-critical systems and office networks, maintaining 98% system availability",
-        "Maintained comprehensive reporting and system documentation ensuring full regulatory compliance and audit readiness",
-        "Streamlined workflow processes through ERP optimization, improving data processing efficiency by 20%"
+        "Managed ERP and office network systems ensuring 98% operational uptime",
+        "Diagnosed Windows OS and application issues, conducted system updates and driver management",
+        "Provided user training and first-line support to 80+ employees across multiple departments"
       ],
-      skills: ["Microsoft Dynamics 365", "ERP Administration", "ICT Support", "System Documentation", "Compliance"]
+      skills: ["ERP Systems", "Windows OS", "Network Management", "User Training", "Technical Support"]
     },
     {
       role: "IT Support Technician",
-      company: "Net&Com plc",
+      company: "Net & Com plc",
       location: "Addis Ababa, Ethiopia",
       period: "06/2015 – 02/2018", 
       achievements: [
-        "Implemented enterprise-grade Windows server environments for 5+ major Ethiopian banks and educational institutions, securing networks for thousands of users",
-        "Deployed large-scale network infrastructure for ECA and World Food Program: 1,500 workstations, 50 printers, 50 communication rooms—completed within 3-week deadline",
-        "Troubleshot Tier I and II issues for live services, maintaining 97% uptime for business-critical systems",
-        "Optimized data center equipment through improved cooling systems and layout designs, reducing energy consumption by 15% and improving performance"
+        "Installed and configured routers, switches, and wireless access points for enterprise clients including ECA and World Food Programme",
+        "Deployed large-scale network infrastructure: 1,500 workstations, 50 printers, 50 communication rooms for major organizations",
+        "Provided technical support for Windows server environments and network systems",
+        "Maintained and troubleshot network connectivity issues ensuring high system availability"
       ],
-      skills: ["Windows Server", "Network Infrastructure", "Data Center Management", "Energy Optimization"]
+      skills: ["Network Installation", "Routers & Switches", "Windows Server", "Technical Support", "Wireless Networks"]
     }
   ];
 

@@ -7,23 +7,9 @@ const Certifications = () => {
     {
       title: "Google IT Support Professional Certificate",
       provider: "Coursera",
-      period: "Nov 2022 – Jul 2023",
+      period: "2023",
       icon: "🏅",
       description: "Technical Support Fundamentals, Computer Networking, Operating Systems, System Administration, IT Security"
-    },
-    {
-      title: "Cisco Certified Network Associate (CCNA)",
-      provider: "Cisco Networking Academy", 
-      period: "Feb 2016 – May 2017",
-      icon: "🌐",
-      description: "Routing, switching, VLANs, IP addressing, subnetting, and advanced networking concepts"
-    },
-    {
-      title: "Cybersecurity Fundamentals & Operations",
-      provider: "Cisco Networking Academy",
-      period: "Sep 2016 – Jul 2017", 
-      icon: "🛡️",
-      description: "Threat detection, defense mechanisms, global implications of cyber threats, and industry best practices"
     },
     {
       title: "Google Cloud Fundamentals: Core Infrastructure",
@@ -35,28 +21,21 @@ const Certifications = () => {
     {
       title: "AWS Cloud Practitioner Essentials",
       provider: "AWS Skill Builder",
-      period: "Jan 2023 – Mar 2023",
+      period: "2023",
       icon: "☁️", 
       description: "Foundational knowledge of cloud computing principles and AWS services"
     },
     {
-      title: "Azure Active Directory: Basic",
-      provider: "LinkedIn Learning",
-      period: "Apr 2023 – May 2023",
-      icon: "🔐",
-      description: "Identity management and security features in Microsoft Azure AD"
-    },
-    {
-      title: "Zendesk Customer Service Professional", 
-      provider: "LinkedIn Learning",
-      period: "Sep 2023 – Oct 2023",
-      icon: "🎧",
-      description: "Ticket management, customer engagement strategies, and leveraging Zendesk tools"
+      title: "Cybersecurity Fundamentals & Operations",
+      provider: "Cisco Networking Academy",
+      period: "2016 – 2017", 
+      icon: "🛡️",
+      description: "Threat detection, defense mechanisms, global implications of cyber threats, and industry best practices"
     },
     {
       title: "NDG Linux Unhatched and Essentials",
       provider: "Cisco Networking Academy",
-      period: "Apr 2023 – Jul 2023",
+      period: "2023",
       icon: "🐧",
       description: "Linux operating systems, command-line interface operations and basic scripting"
     }
@@ -64,18 +43,18 @@ const Certifications = () => {
 
   const education = [
     {
-      degree: "Bachelor of Science in Information Technology",
+      degree: "B.Sc. in Information Technologies",
       specialization: "Software Engineering",
       institution: "Adama Science and Technology University",
       period: "Sep 2009 – Oct 2014",
       icon: "🎓"
     },
     {
-      degree: "Computer Maintenance and Networking",
+      degree: "Cisco Certified Network Associate (CCNA)",
       specialization: "",
-      institution: "D.M.A Technology Institute", 
-      period: "Mar 2012 – Sep 2012",
-      icon: "🔧"
+      institution: "Addis Ababa University, School of Commerce Cisco Local Academy", 
+      period: "Feb 2016 – Jan 2017",
+      icon: "🌐"
     }
   ];
 

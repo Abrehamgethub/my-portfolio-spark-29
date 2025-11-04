@@ -3,16 +3,16 @@ import profilePhoto from "@/assets/profile-photo.jpg";
 
 const About = () => {
   const skills = [
-    { name: "AWS Cloud Services & Architecture", level: "Expert" },
-    { name: "Network Administration & CCNA", level: "Expert" },
-    { name: "IT Support & System Administration", level: "Advanced" },
-    { name: "Cloud Operations & Infrastructure", level: "Advanced" },
-    { name: "Google Cloud Platform (GCP)", level: "Advanced" },
-    { name: "Cybersecurity & Security", level: "Advanced" },
-    { name: "Database Management", level: "Proficient" },
-    { name: "Serverless Computing", level: "Proficient" },
-    { name: "AI/LLM Orchestration", level: "Advanced" },
-    { name: "Adobe Creative Suite", level: "Expert" }
+    { name: "LAN/WAN Configuration & Maintenance", level: "Expert" },
+    { name: "Windows Server & OS Administration", level: "Expert" },
+    { name: "Network Security & Firewalls", level: "Expert" },
+    { name: "DHCP / DNS / IP Configuration", level: "Advanced" },
+    { name: "User Support & Troubleshooting", level: "Advanced" },
+    { name: "System Documentation & Device Inventory", level: "Advanced" },
+    { name: "Backup, Recovery & Data Protection", level: "Advanced" },
+    { name: "Vendor Coordination & Incident Escalation", level: "Proficient" },
+    { name: "Cloud Services (AWS/GCP)", level: "Proficient" },
+    { name: "Linux Administration", level: "Proficient" }
   ];
 
   return (
@@ -65,22 +65,22 @@ const About = () => {
             <div className="lg:col-span-3 space-y-6 animate-fade-in">
               <div className="space-y-5">
                 <p className="text-lg leading-relaxed text-muted-foreground">
-                  <strong>Creative Technologist and AI Innovation Specialist</strong> with 9+ years driving digital transformation 
-                  at the intersection of technology, creativity, and artificial intelligence. I orchestrate complex multi-AI systems as 
-                  strategic partners—not just tools—while delivering enterprise-grade infrastructure and compelling digital experiences 
-                  that measurably improve business operations and achieve strategic objectives.
+                  <strong>Results-driven System & Network Administrator</strong> with 9+ years of experience in IT infrastructure, 
+                  system support, and network management. Proven expertise in LAN/WAN setup, Windows systems administration, and 
+                  security configuration for enterprise environments. Adept at troubleshooting, user support, and coordinating with 
+                  vendors to ensure high system availability and compliance.
                 </p>
                 
                 <p className="text-lg leading-relaxed text-muted-foreground">
-                  From coordinating teams of LLMs in AI workshops to architecting secure network infrastructures for major financial 
-                  institutions, I consistently translate cutting-edge AI innovation into practical, high-impact business solutions. My technical depth spans 
-                  <strong> data center modernization (40% uptime improvement)</strong>, <strong>ERP optimization (25% error reduction)</strong>, 
-                  and <strong>large-scale network deployments (1500+ workstations)</strong>—complemented by creative excellence in 
-                  Adobe Creative Suite for impactful digital campaigns.
+                  Strong record of reducing downtime and improving network performance through proactive maintenance and monitoring. 
+                  Successfully managed IT infrastructure for major financial institutions and international organizations. 
+                  My technical depth spans <strong>enterprise network deployment (1,500+ workstations)</strong>, 
+                  <strong>system administration (Windows Server, DHCP/DNS)</strong>, and <strong>security management 
+                  (firewalls, access control, ISO 27001 compliance)</strong>—ensuring secure, documented, and highly available IT environments.
                 </p>
 
                 <div className="flex flex-wrap gap-2.5">
-                  {["AWS Cloud", "Google Cloud", "CCNA", "Network Administration", "Cloud Operations", "IT Support", "Cybersecurity", "Serverless", "Load Balancing", "Databases", "Linux", "Cloud Security", "AI Orchestration", "Prompt Engineering", "Adobe Creative Suite"].map((tech) => (
+                  {["LAN/WAN Configuration", "Windows Server Admin", "DHCP/DNS/IP Config", "Network Security", "Firewalls", "System Documentation", "Backup & Recovery", "User Support", "CCNA", "Cisco", "Linux", "Cloud (AWS/GCP)", "Vendor Coordination", "ISO 27001"].map((tech) => (
                     <span 
                       key={tech}
                       className="px-3.5 py-1.5 bg-card rounded-full text-sm font-medium shadow-soft hover:shadow-medium hover:scale-105 transition-all duration-300"
@@ -93,7 +93,7 @@ const About = () => {
 
               <Card className="p-6 bg-card-gradient shadow-medium border-primary/20">
                 <h3 className="text-xl font-bold mb-3">Skills & Expertise</h3>
-                <p className="text-sm text-muted-foreground mb-5">Demonstrated proficiency across key IT and AI domains.</p>
+                <p className="text-sm text-muted-foreground mb-5">Core competencies in IT infrastructure and system administration</p>
                 <div className="space-y-3">
                   {skills.map((skill) => (
                     <div key={skill.name} className="flex justify-between items-center py-1">
