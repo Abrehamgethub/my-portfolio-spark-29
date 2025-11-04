@@ -3,14 +3,16 @@ import profilePhoto from "@/assets/profile-photo.jpg";
 
 const About = () => {
   const skills = [
-    { name: "AWS Cloud Services & Architecture", level: 94 },
-    { name: "Network Administration & CCNA", level: 95 },
-    { name: "IT Support & System Administration", level: 93 },
-    { name: "Cloud Operations & Infrastructure", level: 90 },
-    { name: "Google Cloud Platform (GCP)", level: 88 },
-    { name: "Cybersecurity & Security", level: 86 },
-    { name: "Database Management", level: 84 },
-    { name: "Serverless Computing", level: 82 }
+    { name: "AWS Cloud Services & Architecture", level: "Expert" },
+    { name: "Network Administration & CCNA", level: "Expert" },
+    { name: "IT Support & System Administration", level: "Advanced" },
+    { name: "Cloud Operations & Infrastructure", level: "Advanced" },
+    { name: "Google Cloud Platform (GCP)", level: "Advanced" },
+    { name: "Cybersecurity & Security", level: "Advanced" },
+    { name: "Database Management", level: "Proficient" },
+    { name: "Serverless Computing", level: "Proficient" },
+    { name: "AI/LLM Orchestration", level: "Advanced" },
+    { name: "Adobe Creative Suite", level: "Expert" }
   ];
 
   return (
@@ -63,21 +65,21 @@ const About = () => {
               <div className="space-y-6">
                 <p className="text-lg leading-relaxed text-muted-foreground">
                   <strong>Creative Technologist and AI Innovation Specialist</strong> with 9+ years driving digital transformation 
-                  at the intersection of technology, creativity, and artificial intelligence. I orchestrate multi-AI systems as 
+                  at the intersection of technology, creativity, and artificial intelligence. I orchestrate complex multi-AI systems as 
                   strategic partners—not just tools—while delivering enterprise-grade infrastructure and compelling digital experiences 
-                  that measurably improve business operations.
+                  that measurably improve business operations and achieve strategic objectives.
                 </p>
                 
                 <p className="text-lg leading-relaxed text-muted-foreground">
                   From coordinating teams of LLMs in AI workshops to architecting secure network infrastructures for major financial 
-                  institutions, I translate cutting-edge AI innovation into practical business solutions. My technical depth spans 
+                  institutions, I consistently translate cutting-edge AI innovation into practical, high-impact business solutions. My technical depth spans 
                   <strong> data center modernization (40% uptime improvement)</strong>, <strong>ERP optimization (25% error reduction)</strong>, 
                   and <strong>large-scale network deployments (1500+ workstations)</strong>—complemented by creative excellence in 
                   Adobe Creative Suite for impactful digital campaigns.
                 </p>
 
                 <div className="flex flex-wrap gap-3">
-                  {["AWS Cloud", "Google Cloud", "CCNA", "Network Administration", "Cloud Operations", "IT Support", "Cybersecurity", "Serverless", "Load Balancing", "Databases", "Linux", "Cloud Security"].map((tech) => (
+                  {["AWS Cloud", "Google Cloud", "CCNA", "Network Administration", "Cloud Operations", "IT Support", "Cybersecurity", "Serverless", "Load Balancing", "Databases", "Linux", "Cloud Security", "AI Orchestration", "Prompt Engineering", "Adobe Creative Suite"].map((tech) => (
                     <span 
                       key={tech}
                       className="px-4 py-2 bg-card rounded-full text-sm font-medium shadow-soft hover:shadow-medium transition-all duration-300"
@@ -90,19 +92,12 @@ const About = () => {
 
               <Card className="p-8 bg-card-gradient shadow-medium">
                 <h3 className="text-2xl font-bold mb-6">Skills & Expertise</h3>
+                <p className="text-muted-foreground mb-6">Demonstrated proficiency across key IT and AI domains.</p>
                 <div className="space-y-4">
                   {skills.map((skill) => (
-                    <div key={skill.name}>
-                      <div className="flex justify-between mb-2">
-                        <span className="font-medium">{skill.name}</span>
-                        <span className="text-muted-foreground">{skill.level}%</span>
-                      </div>
-                      <div className="w-full bg-secondary rounded-full h-2">
-                        <div 
-                          className="bg-hero-gradient h-2 rounded-full transition-all duration-1000 ease-out"
-                          style={{ width: `${skill.level}%` }}
-                        />
-                      </div>
+                    <div key={skill.name} className="flex justify-between items-center">
+                      <span className="font-medium">{skill.name}</span>
+                      <span className="text-muted-foreground font-semibold">{skill.level}</span>
                     </div>
                   ))}
                 </div>

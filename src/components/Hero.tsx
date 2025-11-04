@@ -34,12 +34,15 @@ const Hero = () => {
               Abreham Kassahun
             </span>
             <br />
-            <span className="text-foreground">Senior IT Infrastructure & Security Leader | AI Innovation Specialist</span>
+            <span className="text-foreground">Transformative IT & AI Leader</span>
           </h1>
           
-          <p className="text-xl md:text-2xl text-muted-foreground mb-8 max-w-2xl mx-auto leading-relaxed">
-            Bridging AI innovation with enterprise-grade technical excellence. 
-            9+ years orchestrating multi-AI workflows, delivering robust infrastructure, and creating compelling digital experiences that drive measurable business impact.
+          <p className="text-lg md:text-xl text-muted-foreground mb-2 max-w-4xl mx-auto leading-relaxed">
+            Architecting Secure Infrastructure and Orchestrating Multi-AI Workflows for Measurable Business Impact
+          </p>
+          
+          <p className="text-base md:text-lg text-muted-foreground mb-8 max-w-3xl mx-auto leading-relaxed">
+            Bridging cutting-edge AI innovation with enterprise-grade technical excellence. With 9+ years orchestrating multi-AI workflows, designing robust infrastructure, and delivering compelling digital experiences that drive significant business impact across diverse sectors.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
