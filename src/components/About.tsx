@@ -19,7 +19,7 @@ const About = () => {
     <section id="about" className="py-20 bg-hero-gradient-subtle">
       <div className="container mx-auto px-6">
         <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-16">
+          <div className="text-center mb-12">
             <h2 className="text-4xl md:text-5xl font-bold mb-4">
               About <span className="bg-hero-gradient bg-clip-text text-transparent">Me</span>
             </h2>
@@ -28,10 +28,10 @@ const About = () => {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-12 items-start">
-            {/* Tech Avatar Section */}
-            <div className="flex justify-center animate-fade-in">
-              <div className="relative group">
+          <div className="grid lg:grid-cols-5 gap-8 items-start">
+            {/* Tech Avatar Section - Optimized size */}
+            <div className="lg:col-span-2 flex justify-center lg:justify-start animate-fade-in">
+              <div className="relative group w-full max-w-sm">
                 {/* Animated gradient ring */}
                 <div className="absolute -inset-2 bg-gradient-to-r from-primary via-accent to-primary rounded-full blur-xl opacity-40 group-hover:opacity-70 transition-all duration-500 animate-pulse"></div>
                 
@@ -44,11 +44,11 @@ const About = () => {
                     <div className="w-full h-full rounded-full bg-background"></div>
                   </div>
                   
-                  {/* Avatar image */}
+                  {/* Avatar image - responsive sizing */}
                   <img 
                     src={profilePhoto} 
                     alt="Abreham Kassahun - Tech Professional"
-                    className="relative rounded-full w-64 h-64 lg:w-80 lg:h-80 object-cover shadow-elegant hover:scale-105 transition-all duration-500 border-4 border-background ring-2 ring-primary/20"
+                    className="relative rounded-full w-full aspect-square object-cover shadow-elegant hover:scale-105 transition-all duration-500 border-4 border-background ring-2 ring-primary/20"
                   />
                   
                   {/* Tech badge overlay */}
@@ -61,8 +61,9 @@ const About = () => {
               </div>
             </div>
 
-            <div className="space-y-8 animate-fade-in">
-              <div className="space-y-6">
+            {/* Content Section - More space */}
+            <div className="lg:col-span-3 space-y-6 animate-fade-in">
+              <div className="space-y-5">
                 <p className="text-lg leading-relaxed text-muted-foreground">
                   <strong>Creative Technologist and AI Innovation Specialist</strong> with 9+ years driving digital transformation 
                   at the intersection of technology, creativity, and artificial intelligence. I orchestrate complex multi-AI systems as 
@@ -78,11 +79,11 @@ const About = () => {
                   Adobe Creative Suite for impactful digital campaigns.
                 </p>
 
-                <div className="flex flex-wrap gap-3">
+                <div className="flex flex-wrap gap-2.5">
                   {["AWS Cloud", "Google Cloud", "CCNA", "Network Administration", "Cloud Operations", "IT Support", "Cybersecurity", "Serverless", "Load Balancing", "Databases", "Linux", "Cloud Security", "AI Orchestration", "Prompt Engineering", "Adobe Creative Suite"].map((tech) => (
                     <span 
                       key={tech}
-                      className="px-4 py-2 bg-card rounded-full text-sm font-medium shadow-soft hover:shadow-medium transition-all duration-300"
+                      className="px-3.5 py-1.5 bg-card rounded-full text-sm font-medium shadow-soft hover:shadow-medium hover:scale-105 transition-all duration-300"
                     >
                       {tech}
                     </span>
@@ -90,14 +91,14 @@ const About = () => {
                 </div>
               </div>
 
-              <Card className="p-8 bg-card-gradient shadow-medium">
-                <h3 className="text-2xl font-bold mb-6">Skills & Expertise</h3>
-                <p className="text-muted-foreground mb-6">Demonstrated proficiency across key IT and AI domains.</p>
-                <div className="space-y-4">
+              <Card className="p-6 bg-card-gradient shadow-medium border-primary/20">
+                <h3 className="text-xl font-bold mb-3">Skills & Expertise</h3>
+                <p className="text-sm text-muted-foreground mb-5">Demonstrated proficiency across key IT and AI domains.</p>
+                <div className="space-y-3">
                   {skills.map((skill) => (
-                    <div key={skill.name} className="flex justify-between items-center">
-                      <span className="font-medium">{skill.name}</span>
-                      <span className="text-muted-foreground font-semibold">{skill.level}</span>
+                    <div key={skill.name} className="flex justify-between items-center py-1">
+                      <span className="font-medium text-sm">{skill.name}</span>
+                      <span className="text-muted-foreground font-semibold text-sm bg-primary/10 px-3 py-1 rounded-full">{skill.level}</span>
                     </div>
                   ))}
                 </div>
