@@ -132,7 +132,9 @@ const Projects = () => {
             {keyProjects.map((project, index) => (
               <Card 
                 key={index}
-                className="group relative overflow-hidden bg-gradient-to-br from-card via-card to-card/50 shadow-soft hover:shadow-strong transition-all duration-500 hover:-translate-y-1 border border-primary/10 hover:border-primary/30"
+                className={`group relative overflow-hidden bg-gradient-to-br from-card via-card to-card/50 shadow-soft hover:shadow-strong transition-all duration-500 hover:-translate-y-1 border border-primary/10 hover:border-primary/30 ${
+                  index === 4 ? 'lg:col-span-3' : ''
+                }`}
               >
                 {/* Gradient accent on top */}
                 <div className="absolute top-0 left-0 right-0 h-1.5 bg-hero-gradient" />
