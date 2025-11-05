@@ -1,7 +1,7 @@
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { Building2, TrendingUp, ExternalLink, Github } from "lucide-react";
+import { Building2, TrendingUp, ExternalLink, Github, Calendar, Award, Zap } from "lucide-react";
 
 const Projects = () => {
   const keyProjects = [
@@ -128,50 +128,64 @@ const Projects = () => {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+          <div className="grid lg:grid-cols-3 md:grid-cols-2 gap-6 max-w-7xl mx-auto">
             {keyProjects.map((project, index) => (
               <Card 
                 key={index}
-                className="group bg-card shadow-soft hover:shadow-strong transition-all duration-300 hover:-translate-y-2"
+                className="group relative overflow-hidden bg-gradient-to-br from-card via-card to-card/50 shadow-soft hover:shadow-strong transition-all duration-500 hover:-translate-y-1 border border-primary/10 hover:border-primary/30"
               >
-                <CardHeader>
-                  <div className="flex items-start justify-between mb-4">
-                    <div className="text-5xl group-hover:animate-float">
+                {/* Gradient accent on top */}
+                <div className="absolute top-0 left-0 right-0 h-1.5 bg-hero-gradient" />
+                
+                {/* Animated background glow */}
+                <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-accent/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                
+                <CardHeader className="relative pb-3">
+                  <div className="flex items-start justify-between mb-3">
+                    <div className="text-4xl transform group-hover:scale-110 transition-transform duration-300">
                       {project.icon}
                     </div>
-                    <Badge variant="secondary" className="text-xs">
+                    <Badge variant="secondary" className="text-xs gap-1 bg-primary/10">
+                      <Calendar className="w-3 h-3" />
                       {project.timeline}
                     </Badge>
                   </div>
                   
-                  <CardTitle className="text-2xl mb-2">{project.title}</CardTitle>
+                  <CardTitle className="text-xl mb-2 group-hover:text-primary transition-colors">
+                    {project.title}
+                  </CardTitle>
                   
-                  <CardDescription className="flex items-center gap-2 text-base">
-                    <Building2 className="w-4 h-4" />
+                  <CardDescription className="flex items-center gap-1.5 text-sm">
+                    <Building2 className="w-3.5 h-3.5" />
                     {project.organization}
                   </CardDescription>
                 </CardHeader>
                 
-                <CardContent className="space-y-4">
-                  <p className="text-muted-foreground leading-relaxed">
+                <CardContent className="relative space-y-4">
+                  <p className="text-muted-foreground text-sm leading-relaxed line-clamp-4">
                     {project.description}
                   </p>
                   
-                  <div className="flex items-center gap-2 p-3 bg-primary/5 rounded-lg border border-primary/10">
-                    <TrendingUp className="w-5 h-5 text-primary" />
-                    <span className="font-semibold text-primary">{project.impact}</span>
+                  <div className="flex items-start gap-2 p-2.5 bg-gradient-to-r from-primary/10 to-accent/10 rounded-lg border border-primary/20">
+                    <Award className="w-4 h-4 text-primary mt-0.5 flex-shrink-0" />
+                    <span className="text-xs font-semibold text-primary leading-tight">{project.impact}</span>
                   </div>
                   
-                  <div className="flex flex-wrap gap-2">
-                    {project.tags.map((tag) => (
+                  <div className="flex flex-wrap gap-1.5">
+                    {project.tags.slice(0, 3).map((tag) => (
                       <Badge 
                         key={tag}
                         variant="outline"
-                        className="text-xs"
+                        className="text-xs px-2 py-0.5 bg-background/50 hover:bg-primary/10 transition-colors"
                       >
                         {tag}
                       </Badge>
                     ))}
+                    {project.tags.length > 3 && (
+                      <Badge variant="outline" className="text-xs px-2 py-0.5 bg-muted">
+                        +{project.tags.length - 3}
+                      </Badge>
+                    )}
                   </div>
                 </CardContent>
               </Card>
@@ -190,53 +204,66 @@ const Projects = () => {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+          <div className="grid lg:grid-cols-3 md:grid-cols-2 gap-6 max-w-7xl mx-auto">
             {featuredProjects.map((project, index) => (
               <Card 
                 key={index}
-                className="group bg-card-gradient shadow-soft hover:shadow-strong transition-all duration-300 hover:-translate-y-2"
+                className="group relative overflow-hidden bg-card-gradient shadow-soft hover:shadow-strong transition-all duration-500 hover:-translate-y-1 border border-primary/10 hover:border-primary/30"
               >
-                <CardHeader>
-                  <div className="text-6xl mb-4 group-hover:animate-float">
-                    {project.image}
+                {/* Animated corner accent */}
+                <div className="absolute top-0 right-0 w-20 h-20 bg-hero-gradient opacity-20 blur-2xl group-hover:opacity-40 transition-opacity duration-500" />
+                
+                <CardHeader className="relative">
+                  <div className="mb-3 flex items-center justify-center w-16 h-16 rounded-xl bg-gradient-to-br from-primary/20 to-accent/20 group-hover:from-primary/30 group-hover:to-accent/30 transition-all duration-300">
+                    <span className="text-3xl transform group-hover:scale-110 transition-transform duration-300">
+                      {project.image}
+                    </span>
                   </div>
-                  <CardTitle className="text-2xl mb-2">{project.title}</CardTitle>
+                  <CardTitle className="text-lg mb-2 group-hover:text-primary transition-colors leading-tight">
+                    {project.title}
+                  </CardTitle>
                 </CardHeader>
-                <CardContent>
-                  <p className="text-muted-foreground mb-4 leading-relaxed">
+                
+                <CardContent className="relative space-y-4">
+                  <p className="text-muted-foreground text-sm leading-relaxed line-clamp-3">
                     {project.description}
                   </p>
                   
-                  <div className="flex flex-wrap gap-2 mb-6">
-                    {project.tags.map((tag) => (
+                  <div className="flex flex-wrap gap-1.5">
+                    {project.tags.slice(0, 3).map((tag) => (
                       <span 
                         key={tag}
-                        className="px-3 py-1 bg-secondary text-secondary-foreground rounded-full text-sm font-medium"
+                        className="px-2 py-1 bg-secondary/50 text-secondary-foreground rounded-md text-xs font-medium hover:bg-secondary transition-colors"
                       >
                         {tag}
                       </span>
                     ))}
+                    {project.tags.length > 3 && (
+                      <span className="px-2 py-1 bg-muted text-muted-foreground rounded-md text-xs font-medium">
+                        +{project.tags.length - 3}
+                      </span>
+                    )}
                   </div>
 
-                  <div className="flex gap-3">
+                  <div className="flex gap-2 pt-2">
                     {project.liveUrl !== "#" && (
                       <Button 
                         size="sm"
-                        className="bg-hero-gradient hover:shadow-medium transition-all duration-300"
+                        className="flex-1 bg-hero-gradient hover:shadow-medium transition-all duration-300 h-9"
                         onClick={() => window.open(project.liveUrl, '_blank', 'noopener,noreferrer')}
                       >
-                        <ExternalLink className="w-4 h-4 mr-2" />
-                        Live Demo
+                        <ExternalLink className="w-3.5 h-3.5 mr-1.5" />
+                        View
                       </Button>
                     )}
                     {project.githubUrl !== "#" && (
                       <Button 
                         size="sm"
                         variant="outline"
-                        className="border-primary text-primary hover:bg-primary hover:text-primary-foreground transition-all duration-300"
+                        className="flex-1 border-primary/30 text-primary hover:bg-primary hover:text-primary-foreground transition-all duration-300 h-9"
                         onClick={() => window.open(project.githubUrl, '_blank', 'noopener,noreferrer')}
                       >
-                        <Github className="w-4 h-4 mr-2" />
+                        <Github className="w-3.5 h-3.5 mr-1.5" />
                         Code
                       </Button>
                     )}
