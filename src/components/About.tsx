@@ -3,16 +3,16 @@ import profilePhoto from "@/assets/profile-photo.jpg";
 
 const About = () => {
   const skills = [
-    { name: "LAN/WAN Configuration & Maintenance", level: "Expert" },
-    { name: "Windows Server & OS Administration", level: "Expert" },
-    { name: "Network Security & Firewalls", level: "Expert" },
-    { name: "DHCP / DNS / IP Configuration", level: "Advanced" },
-    { name: "User Support & Troubleshooting", level: "Advanced" },
-    { name: "System Documentation & Device Inventory", level: "Advanced" },
-    { name: "Backup, Recovery & Data Protection", level: "Advanced" },
-    { name: "Vendor Coordination & Incident Escalation", level: "Proficient" },
-    { name: "Cloud Services (AWS/GCP)", level: "Proficient" },
-    { name: "Linux Administration", level: "Proficient" }
+    { name: "LAN/WAN Configuration & Maintenance", level: "Expert", percentage: 95 },
+    { name: "Windows Server & OS Administration", level: "Expert", percentage: 95 },
+    { name: "Network Security & Firewalls", level: "Expert", percentage: 90 },
+    { name: "DHCP / DNS / IP Configuration", level: "Advanced", percentage: 85 },
+    { name: "User Support & Troubleshooting", level: "Advanced", percentage: 85 },
+    { name: "System Documentation & Device Inventory", level: "Advanced", percentage: 80 },
+    { name: "Backup, Recovery & Data Protection", level: "Advanced", percentage: 80 },
+    { name: "Vendor Coordination & Incident Escalation", level: "Proficient", percentage: 75 },
+    { name: "Cloud Services (AWS/GCP)", level: "Proficient", percentage: 70 },
+    { name: "Linux Administration", level: "Proficient", percentage: 70 }
   ];
 
   return (
@@ -94,11 +94,19 @@ const About = () => {
               <Card className="p-6 bg-card-gradient shadow-medium border-primary/20">
                 <h3 className="text-xl font-bold mb-3">Skills & Expertise</h3>
                 <p className="text-sm text-muted-foreground mb-5">Core competencies in IT infrastructure and system administration</p>
-                <div className="space-y-3">
+                <div className="space-y-4">
                   {skills.map((skill) => (
-                    <div key={skill.name} className="flex justify-between items-center py-1">
-                      <span className="font-medium text-sm">{skill.name}</span>
-                      <span className="text-muted-foreground font-semibold text-sm bg-primary/10 px-3 py-1 rounded-full">{skill.level}</span>
+                    <div key={skill.name} className="space-y-2">
+                      <div className="flex justify-between items-center">
+                        <span className="font-medium text-sm">{skill.name}</span>
+                        <span className="text-muted-foreground font-semibold text-xs bg-primary/10 px-2.5 py-1 rounded-full">{skill.level}</span>
+                      </div>
+                      <div className="w-full bg-muted rounded-full h-2 overflow-hidden">
+                        <div 
+                          className="bg-hero-gradient h-full rounded-full transition-all duration-1000 ease-out hover:shadow-soft"
+                          style={{ width: `${skill.percentage}%` }}
+                        />
+                      </div>
                     </div>
                   ))}
                 </div>
