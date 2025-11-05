@@ -1,6 +1,5 @@
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { MapPin, Calendar } from "lucide-react";
+import { MapPin, Calendar, Briefcase } from "lucide-react";
 
 const Experience = () => {
   const experiences = [
@@ -82,53 +81,49 @@ const Experience = () => {
           </p>
         </div>
 
-        <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-8">
+        <div className="max-w-5xl mx-auto space-y-8">
           {experiences.map((experience, index) => (
-            <Card 
+            <div 
               key={index}
-              className="bg-card-gradient shadow-soft hover:shadow-medium transition-all duration-300 hover:-translate-y-1"
+              className="border-l-4 border-primary/30 pl-6 pb-8 hover:border-primary/60 transition-all duration-300"
             >
-              <CardHeader>
-                <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
-                  <div>
-                    <CardTitle className="text-xl mb-2">{experience.role}</CardTitle>
-                    <div className="flex items-center gap-2 text-muted-foreground mb-2">
-                      <span className="font-semibold text-foreground">{experience.company}</span>
+              <div className="flex items-start gap-3 mb-3">
+                <div className="bg-hero-gradient p-2 rounded-lg shadow-soft mt-1">
+                  <Briefcase className="w-5 h-5 text-primary-foreground" />
+                </div>
+                <div className="flex-1">
+                  <h3 className="text-xl font-bold mb-1">{experience.role}</h3>
+                  <p className="text-lg font-semibold text-primary mb-2">{experience.company}</p>
+                  <div className="flex flex-wrap gap-4 text-sm text-muted-foreground mb-3">
+                    <div className="flex items-center gap-1.5">
+                      <MapPin className="w-4 h-4" />
+                      {experience.location}
                     </div>
-                    <div className="flex flex-col sm:flex-row gap-2 text-sm text-muted-foreground">
-                      <div className="flex items-center gap-1">
-                        <MapPin className="w-4 h-4" />
-                        {experience.location}
-                      </div>
-                      <div className="flex items-center gap-1">
-                        <Calendar className="w-4 h-4" />
-                        {experience.period}
-                      </div>
+                    <div className="flex items-center gap-1.5">
+                      <Calendar className="w-4 h-4" />
+                      {experience.period}
                     </div>
                   </div>
                 </div>
-              </CardHeader>
-              <CardContent>
-                <div className="space-y-4">
-                  <ul className="space-y-2">
-                    {experience.achievements.map((achievement, achievementIndex) => (
-                      <li key={achievementIndex} className="flex items-start gap-2">
-                        <span className="w-2 h-2 bg-hero-gradient rounded-full mt-2 flex-shrink-0"></span>
-                        <span className="text-muted-foreground leading-relaxed">{achievement}</span>
-                      </li>
-                    ))}
-                  </ul>
-                  
-                  <div className="flex flex-wrap gap-2 pt-2">
-                    {experience.skills.map((skill) => (
-                      <Badge key={skill} variant="secondary" className="bg-secondary/50">
-                        {skill}
-                      </Badge>
-                    ))}
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
+              </div>
+
+              <ul className="space-y-2 mb-4 ml-1">
+                {experience.achievements.map((achievement, achievementIndex) => (
+                  <li key={achievementIndex} className="flex items-start gap-3 text-muted-foreground">
+                    <span className="text-primary mt-1.5">•</span>
+                    <span className="leading-relaxed">{achievement}</span>
+                  </li>
+                ))}
+              </ul>
+              
+              <div className="flex flex-wrap gap-2 ml-1">
+                {experience.skills.map((skill) => (
+                  <Badge key={skill} variant="secondary" className="bg-primary/10 hover:bg-primary/20 transition-colors">
+                    {skill}
+                  </Badge>
+                ))}
+              </div>
+            </div>
           ))}
         </div>
       </div>
