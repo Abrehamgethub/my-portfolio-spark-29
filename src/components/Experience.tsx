@@ -1,5 +1,5 @@
 import { Badge } from "@/components/ui/badge";
-import { MapPin, Calendar, Briefcase } from "lucide-react";
+import { MapPin, Calendar, Briefcase, TrendingUp, Users, Award, Zap } from "lucide-react";
 
 const Experience = () => {
   const experiences = [
@@ -81,48 +81,83 @@ const Experience = () => {
           </p>
         </div>
 
-        <div className="max-w-5xl mx-auto space-y-8">
+        <div className="max-w-5xl mx-auto space-y-12">
           {experiences.map((experience, index) => (
             <div 
               key={index}
-              className="border-l-4 border-primary/30 pl-6 pb-8 hover:border-primary/60 transition-all duration-300"
+              className="relative group"
             >
-              <div className="flex items-start gap-3 mb-3">
-                <div className="bg-hero-gradient p-2 rounded-lg shadow-soft mt-1">
-                  <Briefcase className="w-5 h-5 text-primary-foreground" />
+              {/* Timeline connector */}
+              <div className="absolute left-0 top-0 bottom-0 w-1 bg-gradient-to-b from-primary via-primary/50 to-transparent group-hover:from-primary group-hover:via-primary group-hover:to-primary/30 transition-all duration-500" />
+              
+              {/* Content */}
+              <div className="pl-8 pb-8">
+                {/* Header Section */}
+                <div className="flex items-start gap-4 mb-4">
+                  <div className="bg-hero-gradient p-3 rounded-xl shadow-soft group-hover:shadow-medium transition-all duration-300 group-hover:scale-110">
+                    <Briefcase className="w-6 h-6 text-primary-foreground" />
+                  </div>
+                  <div className="flex-1">
+                    <h3 className="text-2xl font-bold mb-1 group-hover:text-primary transition-colors">{experience.role}</h3>
+                    <p className="text-lg font-semibold bg-hero-gradient bg-clip-text text-transparent mb-3">{experience.company}</p>
+                    <div className="flex flex-wrap gap-4 text-sm">
+                      <div className="flex items-center gap-1.5 text-muted-foreground bg-muted/50 px-3 py-1.5 rounded-full">
+                        <MapPin className="w-4 h-4 text-primary" />
+                        <span>{experience.location}</span>
+                      </div>
+                      <div className="flex items-center gap-1.5 text-muted-foreground bg-muted/50 px-3 py-1.5 rounded-full">
+                        <Calendar className="w-4 h-4 text-primary" />
+                        <span className="font-medium">{experience.period}</span>
+                      </div>
+                    </div>
+                  </div>
                 </div>
-                <div className="flex-1">
-                  <h3 className="text-xl font-bold mb-1">{experience.role}</h3>
-                  <p className="text-lg font-semibold text-primary mb-2">{experience.company}</p>
-                  <div className="flex flex-wrap gap-4 text-sm text-muted-foreground mb-3">
-                    <div className="flex items-center gap-1.5">
-                      <MapPin className="w-4 h-4" />
-                      {experience.location}
-                    </div>
-                    <div className="flex items-center gap-1.5">
-                      <Calendar className="w-4 h-4" />
-                      {experience.period}
-                    </div>
+
+                {/* Achievements Section */}
+                <div className="bg-gradient-to-br from-card via-card/50 to-transparent rounded-lg p-5 border border-primary/10 group-hover:border-primary/30 transition-all duration-300 shadow-soft">
+                  <div className="flex items-center gap-2 mb-4">
+                    <Award className="w-5 h-5 text-primary" />
+                    <h4 className="font-semibold text-sm uppercase tracking-wide">Key Achievements & Impact</h4>
+                  </div>
+                  
+                  <ul className="space-y-3">
+                    {experience.achievements.map((achievement, achievementIndex) => (
+                      <li key={achievementIndex} className="flex items-start gap-3 group/item">
+                        <div className="mt-1.5">
+                          <div className="w-2 h-2 rounded-full bg-hero-gradient group-hover/item:scale-125 transition-transform duration-300" />
+                        </div>
+                        <span className="text-muted-foreground leading-relaxed flex-1 group-hover/item:text-foreground transition-colors">
+                          {achievement}
+                        </span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+
+                {/* Skills Section */}
+                <div className="mt-4">
+                  <div className="flex items-center gap-2 mb-3">
+                    <Zap className="w-4 h-4 text-primary" />
+                    <h4 className="font-semibold text-xs uppercase tracking-wide text-muted-foreground">Core Technologies & Skills</h4>
+                  </div>
+                  <div className="flex flex-wrap gap-2">
+                    {experience.skills.map((skill) => (
+                      <Badge 
+                        key={skill} 
+                        variant="secondary" 
+                        className="bg-gradient-to-r from-primary/10 to-accent/10 hover:from-primary/20 hover:to-accent/20 border border-primary/20 hover:border-primary/40 transition-all duration-300 hover:scale-105"
+                      >
+                        {skill}
+                      </Badge>
+                    ))}
                   </div>
                 </div>
               </div>
 
-              <ul className="space-y-2 mb-4 ml-1">
-                {experience.achievements.map((achievement, achievementIndex) => (
-                  <li key={achievementIndex} className="flex items-start gap-3 text-muted-foreground">
-                    <span className="text-primary mt-1.5">•</span>
-                    <span className="leading-relaxed">{achievement}</span>
-                  </li>
-                ))}
-              </ul>
-              
-              <div className="flex flex-wrap gap-2 ml-1">
-                {experience.skills.map((skill) => (
-                  <Badge key={skill} variant="secondary" className="bg-primary/10 hover:bg-primary/20 transition-colors">
-                    {skill}
-                  </Badge>
-                ))}
-              </div>
+              {/* Separator line for non-last items */}
+              {index < experiences.length - 1 && (
+                <div className="ml-8 border-t border-dashed border-muted-foreground/20 my-4" />
+              )}
             </div>
           ))}
         </div>
