@@ -128,12 +128,12 @@ const Projects = () => {
             </p>
           </div>
 
-          <div className="grid lg:grid-cols-3 md:grid-cols-2 gap-6 max-w-7xl mx-auto">
+          <div className="grid lg:grid-cols-3 md:grid-cols-2 gap-6 max-w-7xl mx-auto auto-rows-fr">
             {keyProjects.map((project, index) => (
               <Card 
                 key={index}
                 className={`group relative overflow-hidden bg-gradient-to-br from-card via-card to-card/50 shadow-soft hover:shadow-strong transition-all duration-500 hover:-translate-y-1 border border-primary/10 hover:border-primary/30 ${
-                  index === 4 ? 'lg:col-span-3' : ''
+                  index === 4 ? 'lg:col-span-2 lg:row-span-1 md:col-span-2' : ''
                 }`}
               >
                 {/* Gradient accent on top */}
