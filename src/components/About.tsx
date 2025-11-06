@@ -91,26 +91,80 @@ const About = () => {
                 </div>
               </div>
 
-              <Card className="p-6 bg-card-gradient shadow-medium border-primary/20">
-                <h3 className="text-xl font-bold mb-3">Skills & Expertise</h3>
-                <p className="text-sm text-muted-foreground mb-5">Core competencies in IT infrastructure and system administration</p>
-                <div className="space-y-4">
-                  {skills.map((skill) => (
-                    <div key={skill.name} className="space-y-2">
-                      <div className="flex justify-between items-center">
-                        <span className="font-medium text-sm">{skill.name}</span>
-                        <span className="text-muted-foreground font-semibold text-xs bg-primary/10 px-2.5 py-1 rounded-full">{skill.level}</span>
+              {/* Modern Skills Section */}
+              <div className="bg-card-gradient border border-primary/20 rounded-xl p-8 shadow-elegant relative overflow-hidden">
+                {/* Decorative background */}
+                <div className="absolute top-0 right-0 w-64 h-64 bg-primary/5 rounded-full blur-3xl -z-10"></div>
+                <div className="absolute bottom-0 left-0 w-48 h-48 bg-accent/5 rounded-full blur-3xl -z-10"></div>
+                
+                <div className="flex items-center gap-3 mb-6">
+                  <div className="p-3 bg-primary/10 rounded-lg">
+                    <svg className="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+                    </svg>
+                  </div>
+                  <div>
+                    <h3 className="text-2xl font-bold">Skills & Expertise</h3>
+                    <p className="text-sm text-muted-foreground">Core competencies in IT infrastructure</p>
+                  </div>
+                </div>
+
+                <div className="grid gap-4">
+                  {skills.map((skill, index) => (
+                    <div 
+                      key={skill.name} 
+                      className="group relative bg-card/50 backdrop-blur-sm rounded-lg p-4 border border-border/50 hover:border-primary/50 transition-all duration-300 hover:shadow-md"
+                      style={{ animationDelay: `${index * 0.1}s` }}
+                    >
+                      <div className="flex justify-between items-center mb-3">
+                        <span className="font-semibold text-sm group-hover:text-primary transition-colors">
+                          {skill.name}
+                        </span>
+                        <div className="flex items-center gap-2">
+                          <span className="text-xs text-muted-foreground font-medium">
+                            {skill.percentage}%
+                          </span>
+                          <span className="text-xs font-semibold bg-primary/10 text-primary px-3 py-1 rounded-full">
+                            {skill.level}
+                          </span>
+                        </div>
                       </div>
-                      <div className="w-full bg-muted rounded-full h-2 overflow-hidden">
+                      
+                      {/* Modern progress bar with gradient */}
+                      <div className="relative w-full bg-muted/50 rounded-full h-2.5 overflow-hidden">
                         <div 
-                          className="bg-hero-gradient h-full rounded-full transition-all duration-1000 ease-out hover:shadow-soft"
-                          style={{ width: `${skill.percentage}%` }}
-                        />
+                          className="absolute inset-0 bg-hero-gradient rounded-full transition-all duration-1000 ease-out group-hover:shadow-glow"
+                          style={{ 
+                            width: `${skill.percentage}%`,
+                            boxShadow: '0 0 10px rgba(var(--primary), 0.5)'
+                          }}
+                        >
+                          {/* Animated shine effect */}
+                          <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent animate-[shimmer_2s_infinite]"></div>
+                        </div>
                       </div>
                     </div>
                   ))}
                 </div>
-              </Card>
+
+                {/* Summary stats at bottom */}
+                <div className="grid grid-cols-3 gap-4 mt-6 pt-6 border-t border-border/50">
+                  <div className="text-center">
+                    <div className="text-2xl font-bold text-primary">{skills.length}</div>
+                    <div className="text-xs text-muted-foreground">Skills</div>
+                  </div>
+                  <div className="text-center">
+                    <div className="text-2xl font-bold text-primary">{skills.filter(s => s.level === "Expert").length}</div>
+                    <div className="text-xs text-muted-foreground">Expert Level</div>
+                  </div>
+                  <div className="text-center">
+                    <div className="text-2xl font-bold text-primary">
+                      {Math.round(skills.reduce((acc, s) => acc + s.percentage, 0) / skills.length)}%
+                    </div>
+                    <div className="text-xs text-muted-foreground">Avg Proficiency</div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>

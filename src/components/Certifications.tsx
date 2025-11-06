@@ -356,21 +356,181 @@ const Certifications = () => {
     }
   ];
 
+  // Credly Badges
+  const credlyBadges = [
+    {
+      title: "Prompt Design in Vertex AI Skill Badge",
+      issuer: "Google Cloud",
+      date: "Oct 2025",
+      image: "https://images.credly.com/images/cef82b2e-970a-4318-8e59-c3e26b7f5c19/image.png",
+      credlyUrl: "https://www.credly.com/users/abreham-kassahun/badges",
+      description: "Expertise in designing effective prompts for AI models using Google Cloud's Vertex AI platform",
+      category: "ai"
+    },
+    {
+      title: "Prepare Data for ML APIs on Google Cloud Skill Badge",
+      issuer: "Google Cloud",
+      date: "Oct 2025",
+      image: "https://images.credly.com/images/68756311-9319-4eeb-a2b7-76defc8dd8a2/image.png",
+      credlyUrl: "https://www.credly.com/users/abreham-kassahun/badges",
+      description: "Skills in preparing and processing data for machine learning APIs on Google Cloud Platform",
+      category: "ai"
+    },
+    {
+      title: "Set Up an App Dev Environment on Google Cloud Skill Badge",
+      issuer: "Google Cloud",
+      date: "Oct 2025",
+      image: "https://images.credly.com/images/42326d44-14ff-4eda-b9c5-7d8f12919253/image.png",
+      credlyUrl: "https://www.credly.com/users/abreham-kassahun/badges",
+      description: "Proficiency in configuring and managing application development environments on Google Cloud",
+      category: "cloud"
+    },
+    {
+      title: "Implement Load Balancing on Compute Engine Skill Badge",
+      issuer: "Google Cloud",
+      date: "Oct 2025",
+      image: "https://images.credly.com/images/eea11cba-2a98-4bbe-bad2-447878dd34a2/image.png",
+      credlyUrl: "https://www.credly.com/users/abreham-kassahun/badges",
+      description: "Practical skills in implementing and configuring load balancing solutions on Google Compute Engine",
+      category: "cloud"
+    },
+    {
+      title: "AWS Educate Introduction to Generative AI",
+      issuer: "Amazon Web Services",
+      date: "Aug 2025",
+      image: "https://images.credly.com/images/e50c657a-edd9-4c93-b1cf-2b6634b54abf/blob",
+      credlyUrl: "https://www.credly.com/users/abreham-kassahun/badges",
+      description: "Foundational knowledge of generative AI concepts, applications, and AWS services supporting AI/ML workloads",
+      category: "ai"
+    },
+    {
+      title: "AWS Educate Getting Started with Serverless",
+      issuer: "Amazon Web Services",
+      date: "Aug 2025",
+      image: "https://images.credly.com/images/25108813-2dd7-45f7-8158-65689b8526b5/blob",
+      credlyUrl: "https://www.credly.com/users/abreham-kassahun/badges",
+      description: "Understanding of serverless computing concepts and AWS Lambda functions",
+      category: "cloud"
+    },
+    {
+      title: "AWS Educate Getting Started with Security",
+      issuer: "Amazon Web Services",
+      date: "Aug 2025",
+      image: "https://images.credly.com/images/fc6fa322-80f4-45a5-9def-91e9bcfde837/blob",
+      credlyUrl: "https://www.credly.com/users/abreham-kassahun/badges",
+      description: "Fundamentals of cloud security, AWS security services, and best practices",
+      category: "it"
+    },
+    {
+      title: "AWS Educate Getting Started with Cloud Ops",
+      issuer: "Amazon Web Services",
+      date: "Aug 2025",
+      image: "https://images.credly.com/images/4251ab91-6d67-47da-801c-855c0bbc6cc3/blob",
+      credlyUrl: "https://www.credly.com/users/abreham-kassahun/badges",
+      description: "Cloud operations, monitoring, and management using AWS services",
+      category: "cloud"
+    },
+    {
+      title: "Lifelong Learning 2025",
+      issuer: "Certiprof",
+      date: "Jul 2025",
+      image: "https://images.credly.com/images/1f70513f-98d2-4b61-b8d7-c509b9090478/blob",
+      credlyUrl: "https://www.credly.com/users/abreham-kassahun/badges",
+      description: "Commitment to continuous learning and professional development",
+      category: "business"
+    },
+    {
+      title: "AWS Educate Getting Started with Databases",
+      issuer: "Amazon Web Services",
+      date: "Jun 2025",
+      image: "https://images.credly.com/images/a08cf90b-9838-4f6c-82bd-8db85fb89dd5/blob",
+      credlyUrl: "https://www.credly.com/users/abreham-kassahun/badges",
+      description: "Database concepts and AWS database services including RDS and DynamoDB",
+      category: "cloud"
+    },
+    {
+      title: "AWS Educate Getting Started with Networking",
+      issuer: "Amazon Web Services",
+      date: "Jun 2025",
+      image: "https://images.credly.com/images/f5095707-7683-4886-940c-3e8e4a2085ca/blob",
+      credlyUrl: "https://www.credly.com/users/abreham-kassahun/badges",
+      description: "Networking fundamentals and AWS VPC, subnets, and routing concepts",
+      category: "networking"
+    },
+    {
+      title: "AWS Educate Getting Started with Compute",
+      issuer: "Amazon Web Services",
+      date: "May 2025",
+      image: "https://images.credly.com/images/7b08cc0e-064b-407d-b70e-323509c3e474/blob",
+      credlyUrl: "https://www.credly.com/users/abreham-kassahun/badges",
+      description: "Foundational compute concepts and AWS EC2 instances, autoscaling, and load balancing",
+      category: "cloud"
+    },
+    {
+      title: "AWS Educate Getting Started with Storage",
+      issuer: "Amazon Web Services",
+      date: "May 2025",
+      image: "https://images.credly.com/images/3b1b42e6-dfc2-492b-90df-8058096cb93d/blob",
+      credlyUrl: "https://www.credly.com/users/abreham-kassahun/badges",
+      description: "Storage fundamentals and AWS S3, EBS, and storage optimization strategies",
+      category: "cloud"
+    },
+    {
+      title: "AWS Educate Introduction to Cloud 101",
+      issuer: "Amazon Web Services",
+      date: "May 2025",
+      image: "https://images.credly.com/images/e51a8579-188d-4363-8ed1-12ad164ef57b/blob",
+      credlyUrl: "https://www.credly.com/users/abreham-kassahun/badges",
+      description: "Introduction to cloud computing concepts and AWS core services",
+      category: "cloud"
+    },
+    {
+      title: "Introduction to Cybersecurity",
+      issuer: "Cisco",
+      date: "Dec 2023",
+      image: "https://images.credly.com/images/af8c6b4e-fc31-47c4-8dcb-eb7a2065dc5b/I2CS__1_.png",
+      credlyUrl: "https://www.credly.com/users/abreham-kassahun/badges",
+      description: "Foundational cybersecurity concepts, threats, and protection strategies",
+      category: "it"
+    },
+    {
+      title: "Google IT Support Professional Certificate",
+      issuer: "Coursera",
+      date: "Jul 2023",
+      image: "https://images.credly.com/images/fb97a12f-c0f1-4f37-9b7d-4a830199fe84/GCC_badge_IT_Support_1000x1000.png",
+      credlyUrl: "https://www.credly.com/users/abreham-kassahun/badges",
+      description: "Comprehensive IT support skills including troubleshooting, customer service, and system administration",
+      category: "it"
+    },
+    {
+      title: "AWS Cloud Quest: Cloud Practitioner",
+      issuer: "Amazon Web Services",
+      date: "2023",
+      image: "https://images.credly.com/images/30816e43-2550-4e1c-be22-3f03c5573bb9/blob",
+      credlyUrl: "https://www.credly.com/users/abreham-kassahun/badges",
+      description: "Practical cloud skills through hands-on AWS scenarios and solutions",
+      category: "cloud"
+    }
+  ];
+
+  // Combine certifications and credly badges
+  const allCertifications = [...certifications, ...credlyBadges];
+
   const categories = [
-    { id: "all", label: "All", icon: Sparkles, count: certifications.length },
-    { id: "cloud", label: "Cloud Computing", icon: Cloud, count: certifications.filter(c => c.category === "cloud").length },
-    { id: "ai", label: "AI & ML", icon: Brain, count: certifications.filter(c => c.category === "ai").length },
-    { id: "creative", label: "Creative & Video", icon: Video, count: certifications.filter(c => c.category === "creative").length },
-    { id: "networking", label: "Networking", icon: Network, count: certifications.filter(c => c.category === "networking").length },
-    { id: "it", label: "IT & Security", icon: Shield, count: certifications.filter(c => c.category === "it").length },
-    { id: "finance", label: "Finance", icon: DollarSign, count: certifications.filter(c => c.category === "finance").length },
-    { id: "blockchain", label: "Blockchain", icon: DollarSign, count: certifications.filter(c => c.category === "blockchain").length },
-    { id: "business", label: "Business", icon: Users, count: certifications.filter(c => c.category === "business").length }
+    { id: "all", label: "All", icon: Sparkles, count: allCertifications.length },
+    { id: "cloud", label: "Cloud Computing", icon: Cloud, count: allCertifications.filter(c => c.category === "cloud").length },
+    { id: "ai", label: "AI & ML", icon: Brain, count: allCertifications.filter(c => c.category === "ai").length },
+    { id: "creative", label: "Creative & Video", icon: Video, count: allCertifications.filter(c => c.category === "creative").length },
+    { id: "networking", label: "Networking", icon: Network, count: allCertifications.filter(c => c.category === "networking").length },
+    { id: "it", label: "IT & Security", icon: Shield, count: allCertifications.filter(c => c.category === "it").length },
+    { id: "finance", label: "Finance", icon: DollarSign, count: allCertifications.filter(c => c.category === "finance").length },
+    { id: "blockchain", label: "Blockchain", icon: DollarSign, count: allCertifications.filter(c => c.category === "blockchain").length },
+    { id: "business", label: "Business", icon: Users, count: allCertifications.filter(c => c.category === "business").length }
   ];
 
   const filteredCertifications = selectedCategory === "all" 
-    ? certifications 
-    : certifications.filter(cert => cert.category === selectedCategory);
+    ? allCertifications 
+    : allCertifications.filter(cert => cert.category === selectedCategory);
 
   return (
     <section id="certifications" className="py-20 bg-hero-gradient-subtle relative overflow-hidden">
@@ -391,10 +551,10 @@ const Certifications = () => {
           {/* Statistics Cards */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-12 animate-fade-in">
             {[
-              { label: "Total Certifications", value: certifications.length, icon: Award, color: "text-primary" },
-              { label: "Cloud & DevOps", value: certifications.filter(c => c.category === "cloud").length, icon: Cloud, color: "text-blue-500" },
-              { label: "AI & Emerging Tech", value: certifications.filter(c => c.category === "ai" || c.category === "blockchain").length, icon: Brain, color: "text-purple-500" },
-              { label: "Creative Suite", value: certifications.filter(c => c.category === "creative").length, icon: Video, color: "text-pink-500" }
+              { label: "Total Certifications", value: allCertifications.length, icon: Award, color: "text-primary" },
+              { label: "Cloud & DevOps", value: allCertifications.filter(c => c.category === "cloud").length, icon: Cloud, color: "text-blue-500" },
+              { label: "AI & Emerging Tech", value: allCertifications.filter(c => c.category === "ai" || c.category === "blockchain").length, icon: Brain, color: "text-purple-500" },
+              { label: "Creative Suite", value: allCertifications.filter(c => c.category === "creative").length, icon: Video, color: "text-pink-500" }
             ].map((stat, index) => (
               <Card key={index} className="bg-card-gradient border-primary/20 hover:border-primary/40 transition-all duration-300 hover:-translate-y-1 hover:shadow-elegant">
                 <CardContent className="p-6 text-center">
@@ -482,7 +642,6 @@ const Certifications = () => {
             {/* Certifications Grid */}
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
               {filteredCertifications.map((cert, index) => {
-                const IconComponent = cert.icon;
                 return (
                   <Card 
                     key={index}
@@ -490,15 +649,30 @@ const Certifications = () => {
                     style={{ animationDelay: `${index * 0.05}s` }}
                   >
                     <CardHeader>
-                      <div className="flex items-start gap-4">
-                        <div className="p-3 rounded-lg bg-accent/50 group-hover:bg-accent transition-colors">
-                          <IconComponent className={`w-6 h-6 ${cert.color}`} />
-                        </div>
-                        <div className="flex-1">
+                      <div className="flex items-start gap-3">
+                        {'image' in cert ? (
+                          <div className="flex-shrink-0">
+                            <img 
+                              src={cert.image} 
+                              alt={cert.title}
+                              className="w-16 h-16 object-contain rounded-lg"
+                              onError={(e) => {
+                                e.currentTarget.src = '/placeholder.svg';
+                              }}
+                            />
+                          </div>
+                        ) : 'icon' in cert ? (
+                          <div className="p-3 rounded-lg bg-accent/50 group-hover:bg-accent transition-colors flex-shrink-0">
+                            <cert.icon className={`w-6 h-6 ${'color' in cert ? cert.color : 'text-primary'}`} />
+                          </div>
+                        ) : null}
+                        <div className="flex-1 min-w-0">
                           <CardTitle className="text-base mb-2 leading-tight group-hover:text-primary transition-colors">
                             {cert.title}
                           </CardTitle>
-                          <p className="text-primary font-medium text-sm mb-2">{cert.provider}</p>
+                          <p className="text-primary font-medium text-sm mb-2">
+                            {'issuer' in cert ? cert.issuer : 'provider' in cert ? cert.provider : ''}
+                          </p>
                           <div className="flex items-center gap-1 text-xs text-muted-foreground">
                             <Calendar className="w-3 h-3" />
                             {cert.date}
@@ -506,14 +680,14 @@ const Certifications = () => {
                         </div>
                       </div>
                     </CardHeader>
-                    {(cert.description || cert.skills || cert.credentialId) && (
+                    {(cert.description || ('skills' in cert && cert.skills) || ('credentialId' in cert && cert.credentialId) || ('credlyUrl' in cert && cert.credlyUrl)) && (
                       <CardContent className="pt-0">
                         {cert.description && (
                           <p className="text-muted-foreground text-sm leading-relaxed mb-3">
                             {cert.description}
                           </p>
                         )}
-                        {cert.skills && cert.skills.length > 0 && (
+                        {'skills' in cert && cert.skills && cert.skills.length > 0 && (
                           <div className="flex flex-wrap gap-1 mb-3">
                             {cert.skills.slice(0, 3).map((skill, idx) => (
                               <Badge key={idx} variant="secondary" className="text-xs">
@@ -527,10 +701,21 @@ const Certifications = () => {
                             )}
                           </div>
                         )}
-                        {cert.credentialId && (
-                          <p className="text-xs text-muted-foreground">
+                        {'credentialId' in cert && cert.credentialId && (
+                          <p className="text-xs text-muted-foreground mb-2">
                             ID: {cert.credentialId}
                           </p>
+                        )}
+                        {'credlyUrl' in cert && cert.credlyUrl && (
+                          <a
+                            href={cert.credlyUrl}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="inline-flex items-center gap-2 text-primary hover:text-primary/80 text-xs font-medium transition-all group-hover:gap-3"
+                          >
+                            <ExternalLink className="w-3 h-3" />
+                            Verify on Credly
+                          </a>
                         )}
                       </CardContent>
                     )}
