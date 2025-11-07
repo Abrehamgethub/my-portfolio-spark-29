@@ -7,16 +7,19 @@ import Certifications from "@/components/Certifications";
 import Contact from "@/components/Contact";
 
 const Index = () => {
-  console.log("Index component rendering");
   return (
     <div className="min-h-screen bg-background">
       <Navigation />
-      <Hero />
-      <About />
-      <Experience />
-      <Projects />
-      <Certifications />
-      <Contact />
+      <div className="lg:ml-80">
+        <div className="container mx-auto px-6 lg:px-12 py-20 lg:py-24 max-w-5xl">
+          <Hero />
+          <About />
+          <Experience />
+          <Projects />
+          <Certifications />
+          <Contact />
+        </div>
+      </div>
     </div>
   );
 };
