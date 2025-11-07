@@ -29,13 +29,13 @@ const Hero = () => {
       {/* Content */}
       <div className="container mx-auto px-6 text-center relative z-10">
         <div className="max-w-4xl mx-auto animate-fade-in">
-          <h1 className="text-5xl md:text-7xl font-bold mb-4 leading-tight">
+          <h1 className="text-5xl md:text-7xl font-bold mb-3 leading-tight">
             <span className="bg-hero-gradient bg-clip-text text-transparent">
               Abreham Kassahun
             </span>
           </h1>
           
-          <p className="text-xl md:text-2xl text-muted-foreground mb-8 font-light">
+          <p className="text-xl md:text-2xl text-muted-foreground mb-6 font-light">
             System Administrator / IT Support & Network Administrator
           </p>
           
