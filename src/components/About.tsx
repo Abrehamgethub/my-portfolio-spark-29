@@ -66,22 +66,15 @@ const About = () => {
               {/* Professional Text and Tech Badges */}
               <div className="space-y-5">
                 <p className="text-lg leading-relaxed text-muted-foreground">
-                  <strong>Results-driven System & Network Administrator</strong> with 9+ years of experience in IT infrastructure, 
-                  system support, and network management. Proven expertise in LAN/WAN setup, Windows systems administration, and 
-                  security configuration for enterprise environments. Adept at troubleshooting, user support, and coordinating with 
-                  vendors to ensure high system availability and compliance.
+                  I am a <strong>Technical Systems Engineer</strong> specializing in network infrastructure, digital workflow automation, and AI-assisted system integration. Over the past 9+ years, I've delivered secure enterprise networks for financial institutions, led IT service operations across educational and corporate environments, and developed AI-powered tools and digital platforms that streamline operations and improve user experience.
                 </p>
                 
                 <p className="text-lg leading-relaxed text-muted-foreground">
-                  Strong record of reducing downtime and improving network performance through proactive maintenance and monitoring. 
-                  Successfully managed IT infrastructure for major financial institutions and international organizations. 
-                  My technical depth spans <strong>enterprise network deployment (1,500+ workstations)</strong>, 
-                  <strong>system administration (Windows Server, DHCP/DNS)</strong>, and <strong>security management 
-                  (firewalls, access control, ISO 27001 compliance)</strong>—ensuring secure, documented, and highly available IT environments.
+                  I am passionate about building systems that are scalable, efficient, and aligned with real business impact. I enjoy bridging technical implementation with operational strategy—and helping teams adopt smarter and more sustainable digital practices.
                 </p>
 
                 <div className="flex flex-wrap gap-2.5">
-                  {["LAN/WAN Configuration", "Windows Server Admin", "DHCP/DNS/IP Config", "Network Security", "Firewalls", "System Documentation", "Backup & Recovery", "User Support", "CCNA", "Cisco", "Linux", "Cloud (AWS/GCP)", "Vendor Coordination", "ISO 27001"].map((tech) => (
+                  {["Network Infrastructure", "System Integration", "AI Automation", "Cloud Solutions", "Security Management", "Digital Transformation", "Workflow Optimization", "Technical Leadership"].map((tech) => (
                     <span 
                       key={tech}
                       className="px-3.5 py-1.5 bg-card rounded-full text-sm font-medium shadow-soft hover:shadow-medium hover:scale-105 transition-all duration-300"

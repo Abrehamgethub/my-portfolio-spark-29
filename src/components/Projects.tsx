@@ -9,8 +9,9 @@ const Projects = () => {
       title: "Data Center Modernization",
       organization: "Hikma Electronics",
       timeline: "2019–2023",
-      description: "Led comprehensive data center transformation initiative for major Ethiopian banks including Abay Bank, Addis International Bank, and United Bank. Architected optimized cabling infrastructure, implemented server virtualization, and redesigned cooling systems to dramatically improve operational efficiency.",
-      impact: "40% improvement in uptime • 15% energy reduction",
+      problem: "Major Ethiopian banks needed optimized data center infrastructure to improve operational efficiency and reduce energy costs.",
+      solution: "Led comprehensive data center transformation initiative. Architected optimized cabling infrastructure, implemented server virtualization, and redesigned cooling systems.",
+      result: "40% improvement in uptime • 15% energy reduction",
       tags: ["Infrastructure", "Virtualization", "Data Center Design", "Performance Optimization"],
       icon: "🏢",
       type: "key"
@@ -19,8 +20,9 @@ const Projects = () => {
       title: "Banking Network Rollout",
       organization: "Net & Com",
       timeline: "2016–2018",
-      description: "Architected and deployed enterprise-grade secure network infrastructure including VPNs, Windows Servers, and Cisco firewall configurations for 5+ major Ethiopian financial institutions. Ensured compliance with banking security standards while maintaining zero-downtime implementation.",
-      impact: "Secured networks for 5+ major banks • 97% uptime maintained",
+      problem: "5+ major Ethiopian financial institutions required secure, compliant network infrastructure with zero-downtime implementation.",
+      solution: "Architected and deployed enterprise-grade secure network infrastructure including VPNs, Windows Servers, and Cisco firewall configurations ensuring banking security compliance.",
+      result: "Secured networks for 5+ major banks • 97% uptime maintained",
       tags: ["Network Security", "VPN", "Cisco Firewalls", "Enterprise Deployment"],
       icon: "🏦",
       type: "key"
@@ -29,8 +31,9 @@ const Projects = () => {
       title: "ERP Support & Optimization",
       organization: "Shemu Group",
       timeline: "2018",
-      description: "Administered Microsoft Dynamics 365 ERP system, managing user access roles, workflows, and data compliance protocols. Optimized business processes through strategic system configuration and comprehensive staff training programs.",
-      impact: "25% reduction in operational errors • 20% efficiency gain",
+      problem: "Business needed to reduce operational errors and improve workflow efficiency in Microsoft Dynamics 365 ERP system.",
+      solution: "Administered ERP system, managed user access roles, workflows, and data compliance protocols. Optimized business processes through strategic configuration and staff training.",
+      result: "25% reduction in operational errors • 20% efficiency gain",
       tags: ["ERP Administration", "Process Optimization", "Data Compliance", "Workflow Management"],
       icon: "⚙️",
       type: "key"
@@ -39,8 +42,9 @@ const Projects = () => {
       title: "ICT Automation & Service Optimization",
       organization: "Ethiopian Education Initiatives",
       timeline: "2024",
-      description: "Implemented automated ticketing system and comprehensive technical documentation library to transform IT service delivery for 350+ users. Streamlined support workflows, knowledge management, and first-contact resolution processes.",
-      impact: "30% improvement in IT response time • 95% first-contact resolution",
+      problem: "IT service delivery for 350+ users lacked efficiency and quick resolution of technical issues.",
+      solution: "Implemented automated ticketing system and comprehensive technical documentation library. Streamlined support workflows, knowledge management, and first-contact resolution processes.",
+      result: "30% improvement in IT response time • 95% first-contact resolution",
       tags: ["IT Automation", "Ticketing Systems", "Documentation", "Service Optimization"],
       icon: "🚀",
       type: "key"
@@ -49,8 +53,9 @@ const Projects = () => {
       title: "Multi-AI Orchestration & Hackathon",
       organization: "ALX Capstone Hub",
       timeline: "September 2025",
-      description: "Orchestrated collaboration between Gemini, ChatGPT, DeepSeek, and v0 AI to develop Ye'brr—a drone-assisted delivery solution for Addis Ababa. Built structured workflows where each AI system performed distinct roles (research, design, validation, development), culminating in a functional web app prototype and executive pitch.",
-      impact: "Award-winning solution • 3-minute CEO pitch • Full MVP delivered",
+      problem: "Needed to develop a drone-assisted delivery solution for Addis Ababa within hackathon timeframe.",
+      solution: "Orchestrated collaboration between Gemini, ChatGPT, DeepSeek, and v0 AI. Built structured workflows where each AI performed distinct roles (research, design, validation, development).",
+      result: "Award-winning solution • 3-minute CEO pitch • Full MVP delivered",
       tags: ["AI Orchestration", "System Design", "Hackathon", "MVP Development", "Strategic Teamwork"],
       icon: "🤖",
       type: "key"
@@ -163,14 +168,23 @@ const Projects = () => {
                   </CardDescription>
                 </CardHeader>
                 
-                <CardContent className="relative space-y-4">
-                  <p className="text-muted-foreground text-sm leading-relaxed line-clamp-4">
-                    {project.description}
-                  </p>
+                <CardContent className="relative space-y-3">
+                  <div className="space-y-2 text-sm">
+                    <div>
+                      <span className="font-semibold text-foreground">Problem:</span>
+                      <span className="text-muted-foreground ml-1">{project.problem}</span>
+                    </div>
+                    <div>
+                      <span className="font-semibold text-foreground">Solution:</span>
+                      <span className="text-muted-foreground ml-1">{project.solution}</span>
+                    </div>
+                  </div>
                   
                   <div className="flex items-start gap-2 p-2.5 bg-gradient-to-r from-primary/10 to-accent/10 rounded-lg border border-primary/20">
                     <Award className="w-4 h-4 text-primary mt-0.5 flex-shrink-0" />
-                    <span className="text-xs font-semibold text-primary leading-tight">{project.impact}</span>
+                    <div>
+                      <div className="text-xs font-semibold text-primary leading-tight">{project.result}</div>
+                    </div>
                   </div>
                   
                   <div className="flex flex-wrap gap-1.5">

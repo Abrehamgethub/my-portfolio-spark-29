@@ -6,13 +6,11 @@ const Hero = () => {
         <h1 className="text-5xl md:text-7xl font-bold text-foreground mb-4">
           Abreham Kassahun
         </h1>
-        <h2 className="text-3xl md:text-5xl font-bold text-muted-foreground mb-6">
-          System Administrator & IT Professional
+        <h2 className="text-2xl md:text-3xl font-bold text-primary mb-3">
+          Technical Systems Engineer | AI & Automation Integrator | Infrastructure & Digital Solutions
         </h2>
         <p className="text-lg text-muted-foreground max-w-2xl leading-relaxed mb-8">
-          Results-driven professional with 9+ years of experience in IT infrastructure, 
-          system support, and network management. Proven expertise in LAN/WAN setup, 
-          Windows systems administration, and security configuration for enterprise environments.
+          I design and implement systems that improve operational efficiency, automate workflows, and connect business platforms across organizations. My work combines IT infrastructure expertise with software integration and emerging AI tools to solve real-world business and digital transformation challenges.
         </p>
       </div>
     </section>
