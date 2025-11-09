@@ -4,6 +4,21 @@ import { MapPin, Calendar, Briefcase, TrendingUp, Users, Award, Zap } from "luci
 const Experience = () => {
   const experiences = [
     {
+      role: "Freelance IT Support Field Engineer (Contract)",
+      company: "AVASO Technology Solutions",
+      location: "Addis Ababa, Ethiopia",
+      period: "November 2025 – Present",
+      achievements: [
+        "Providing on-site and remote IT support services for AVASO clients",
+        "Troubleshooting hardware and software issues in enterprise environments",
+        "Supporting network device configurations, workstation setups, and field replacements",
+        "Coordinating directly with the Global Field Service (GFS) Team for ticket assignments and reporting",
+        "Maintaining strong communication and customer service during client engagements",
+        "Completing activity documentation and ensuring customer sign-off after each job"
+      ],
+      skills: ["Field Support", "Hardware Troubleshooting", "Network Configuration", "Client Relations", "Documentation", "Remote Support"]
+    },
+    {
       role: "Creative Technologist & IT Consultant",
       company: "Freelance (Remote / Local SMEs)",
       location: "Addis Ababa, Ethiopia",
