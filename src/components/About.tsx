@@ -2,17 +2,48 @@ import { Card } from "@/components/ui/card";
 import profilePhoto from "@/assets/profile-photo.jpg";
 
 const About = () => {
-  const skills = [
-    { name: "LAN/WAN Configuration & Maintenance", level: "Expert", percentage: 95 },
-    { name: "Windows Server & OS Administration", level: "Expert", percentage: 95 },
-    { name: "Network Security & Firewalls", level: "Expert", percentage: 90 },
-    { name: "DHCP / DNS / IP Configuration", level: "Advanced", percentage: 85 },
-    { name: "User Support & Troubleshooting", level: "Advanced", percentage: 85 },
-    { name: "System Documentation & Device Inventory", level: "Advanced", percentage: 80 },
-    { name: "Backup, Recovery & Data Protection", level: "Advanced", percentage: 80 },
-    { name: "Vendor Coordination & Incident Escalation", level: "Proficient", percentage: 75 },
-    { name: "Cloud Services (AWS/GCP)", level: "Proficient", percentage: 70 },
-    { name: "Linux Administration", level: "Proficient", percentage: 70 }
+  const technicalSkills = [
+    {
+      category: "IT Support & Troubleshooting",
+      items: ["Windows, macOS, Linux user support", "Hardware diagnostics", "System performance optimization"]
+    },
+    {
+      category: "Networking",
+      items: ["TCP/IP, DNS, DHCP", "LAN/WAN setup, Wi-Fi configuration", "Router & switch configuration"]
+    },
+    {
+      category: "Systems & Tools",
+      items: ["Active Directory, Microsoft 365", "ServiceNow / Jira ticketing systems", "Remote support tools (TeamViewer, AnyDesk)"]
+    },
+    {
+      category: "Field Service Operations",
+      items: ["On-site hardware replacement", "Desktop/laptop build & imaging", "Printer / network device installation"]
+    },
+    {
+      category: "Scripting & Automation",
+      items: ["Python scripting for routine IT tasks", "Bash & command-line operations"]
+    },
+    {
+      category: "Security & Access Control",
+      items: ["User access provisioning", "Password policy enforcement", "Endpoint security practices"]
+    }
+  ];
+
+  const softSkills = [
+    "Clear and empathetic communication",
+    "Problem-solving under time constraints",
+    "Customer service and user training",
+    "Team collaboration with remote coordination",
+    "Documentation and activity reporting accuracy"
+  ];
+
+  const toolsPlatforms = [
+    { category: "Remote Support", tools: "TeamViewer, AnyDesk, RDP" },
+    { category: "Ticketing & ITSM", tools: "ServiceNow, Jira, Freshservice" },
+    { category: "Systems", tools: "Windows 10/11, macOS, Linux (Ubuntu)" },
+    { category: "Networking", tools: "Cisco basics, MikroTik, Ubiquiti" },
+    { category: "Cloud Productivity", tools: "Microsoft 365, Google Workspace" },
+    { category: "Scripting", tools: "Python, Bash, Shell" }
   ];
 
   return (
@@ -87,79 +118,84 @@ const About = () => {
             </div>
 
             {/* Right Column: Skills & Expertise */}
-            <div className="animate-fade-in">
-              {/* Modern Skills Section */}
-              <div className="bg-card-gradient border border-primary/20 rounded-xl p-8 shadow-elegant relative overflow-hidden">
-                {/* Decorative background */}
+            <div className="animate-fade-in space-y-6">
+              {/* Technical Skills */}
+              <div className="bg-card-gradient border border-primary/20 rounded-xl p-6 shadow-elegant relative overflow-hidden">
                 <div className="absolute top-0 right-0 w-64 h-64 bg-primary/5 rounded-full blur-3xl -z-10"></div>
-                <div className="absolute bottom-0 left-0 w-48 h-48 bg-accent/5 rounded-full blur-3xl -z-10"></div>
                 
                 <div className="flex items-center gap-3 mb-6">
                   <div className="p-3 bg-primary/10 rounded-lg">
                     <svg className="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                     </svg>
                   </div>
                   <div>
-                    <h3 className="text-2xl font-bold">Skills & Expertise</h3>
-                    <p className="text-sm text-muted-foreground">Core competencies in IT infrastructure</p>
+                    <h3 className="text-2xl font-bold">Technical Skills</h3>
+                    <p className="text-sm text-muted-foreground">Core competencies</p>
                   </div>
                 </div>
 
-                <div className="grid gap-4">
-                  {skills.map((skill, index) => (
-                    <div 
-                      key={skill.name} 
-                      className="group relative bg-card/50 backdrop-blur-sm rounded-lg p-4 border border-border/50 hover:border-primary/50 transition-all duration-300 hover:shadow-md"
-                      style={{ animationDelay: `${index * 0.1}s` }}
-                    >
-                      <div className="flex justify-between items-center mb-3">
-                        <span className="font-semibold text-sm group-hover:text-primary transition-colors">
-                          {skill.name}
-                        </span>
-                        <div className="flex items-center gap-2">
-                          <span className="text-xs text-muted-foreground font-medium">
-                            {skill.percentage}%
-                          </span>
-                          <span className="text-xs font-semibold bg-primary/10 text-primary px-3 py-1 rounded-full">
-                            {skill.level}
-                          </span>
-                        </div>
-                      </div>
-                      
-                      {/* Modern progress bar with gradient */}
-                      <div className="relative w-full bg-muted/50 rounded-full h-2.5 overflow-hidden">
-                        <div 
-                          className="absolute inset-0 bg-hero-gradient rounded-full transition-all duration-1000 ease-out group-hover:shadow-glow"
-                          style={{ 
-                            width: `${skill.percentage}%`,
-                            boxShadow: '0 0 10px rgba(var(--primary), 0.5)'
-                          }}
-                        >
-                          {/* Animated shine effect */}
-                          <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent animate-[shimmer_2s_infinite]"></div>
-                        </div>
+                <div className="space-y-5">
+                  {technicalSkills.map((skill, index) => (
+                    <div key={skill.category} className="group">
+                      <h4 className="font-semibold text-sm text-primary mb-2 flex items-center gap-2">
+                        <span className="w-1.5 h-1.5 rounded-full bg-primary"></span>
+                        {skill.category}
+                      </h4>
+                      <div className="pl-4 space-y-1">
+                        {skill.items.map((item, idx) => (
+                          <p key={idx} className="text-sm text-muted-foreground leading-relaxed">
+                            • {item}
+                          </p>
+                        ))}
                       </div>
                     </div>
                   ))}
                 </div>
+              </div>
 
-                {/* Summary stats at bottom */}
-                <div className="grid grid-cols-3 gap-4 mt-6 pt-6 border-t border-border/50">
-                  <div className="text-center">
-                    <div className="text-2xl font-bold text-primary">{skills.length}</div>
-                    <div className="text-xs text-muted-foreground">Skills</div>
+              {/* Soft Skills */}
+              <div className="bg-card-gradient border border-primary/20 rounded-xl p-6 shadow-elegant">
+                <div className="flex items-center gap-3 mb-4">
+                  <div className="p-3 bg-primary/10 rounded-lg">
+                    <svg className="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z" />
+                    </svg>
                   </div>
-                  <div className="text-center">
-                    <div className="text-2xl font-bold text-primary">{skills.filter(s => s.level === "Expert").length}</div>
-                    <div className="text-xs text-muted-foreground">Expert Level</div>
+                  <div>
+                    <h3 className="text-2xl font-bold">Soft Skills</h3>
                   </div>
-                  <div className="text-center">
-                    <div className="text-2xl font-bold text-primary">
-                      {Math.round(skills.reduce((acc, s) => acc + s.percentage, 0) / skills.length)}%
+                </div>
+                <div className="grid gap-2">
+                  {softSkills.map((skill, index) => (
+                    <div key={index} className="flex items-center gap-2 text-sm text-muted-foreground">
+                      <span className="w-1.5 h-1.5 rounded-full bg-primary flex-shrink-0"></span>
+                      {skill}
                     </div>
-                    <div className="text-xs text-muted-foreground">Avg Proficiency</div>
+                  ))}
+                </div>
+              </div>
+
+              {/* Tools & Platforms */}
+              <div className="bg-card-gradient border border-primary/20 rounded-xl p-6 shadow-elegant">
+                <div className="flex items-center gap-3 mb-4">
+                  <div className="p-3 bg-primary/10 rounded-lg">
+                    <svg className="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                    </svg>
                   </div>
+                  <div>
+                    <h3 className="text-2xl font-bold">Tools & Platforms</h3>
+                  </div>
+                </div>
+                <div className="space-y-3">
+                  {toolsPlatforms.map((platform, index) => (
+                    <div key={index} className="flex flex-col sm:flex-row sm:items-start gap-2 pb-3 border-b border-border/30 last:border-0 last:pb-0">
+                      <span className="font-semibold text-sm text-primary min-w-[140px]">{platform.category}</span>
+                      <span className="text-sm text-muted-foreground">{platform.tools}</span>
+                    </div>
+                  ))}
                 </div>
               </div>
             </div>
